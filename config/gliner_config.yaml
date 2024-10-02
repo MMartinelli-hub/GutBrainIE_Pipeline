@@ -1,0 +1,30 @@
+# gliner_config.yaml
+model_name: "urchade/gliner_large_bio-v0.1"
+threshold: 0.2
+processing: "sentence"  # options: document, sentence, label
+flat_ner: False         # Whether to perform Flat NER, i.e., no overlapping entities
+multi_label: False     # Whether to perform multi-label extraction, i.e., multiple labels for the same entity
+
+corpus_file_path: "retrieved_articles/retrieved_articles.txt"
+output_directory: "predicted_annotations"
+include_configuration_in_output: False
+
+labels:
+  T000: "Gene"
+  T001: "Gene Product"
+  T002: "Disease"
+  T003: "Phenotypic Feature"
+  T004: "Chemical"
+  T005: "Chemical Entity"
+  T006: "Organism"
+  T007: "Organism Taxonomy"
+  #T103: "Chemical"
+  #T038: "Biologic Function"
+  #T017: "Anatomical Structure"
+  #T007: "Bacterium"
+  #T031: "Body Substance"
+  #T204: "Eukaryote"
+  #T168: "Food"
+  #T201: "Clinical Attribute"
+  #T005: "Virus"
+  #T022: "Body System"

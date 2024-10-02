@@ -1,0 +1,5 @@
+# pubmed_retriever
+email: 'marco.martinelli.4@phd.unipd.it'
+pmid_list_path: 'pmid_list_short.csv'
+store_retrieved_articles_path: 'retrieved_articles'
+
