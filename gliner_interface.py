@@ -20,9 +20,6 @@ class GLiNERInterface:
         # Load configuration
         self.config = utils.load_config(config_file)
 
-        # Set up logging
-        self.setup_logging()
-
         # Parse GLiNER runtime parameters
         self.model_name = self.config['model_name']
         self.threshold = self.config['threshold']        
@@ -33,7 +30,14 @@ class GLiNERInterface:
         # Parse input and output paths
         self.corpus_file_path = self.config['corpus_file_path']
         self.output_directory = self.config['output_directory']
+
+        # Create the output directory if it doesn't exist
+        if not os.path.exists(self.output_directory):
+            os.makedirs(self.output_directory)
         
+        # Set up logging
+        self.setup_logging()
+
         # Initialize GLiNER model
         self.initialize_gliner()
         # Initialize other variables
@@ -48,11 +52,18 @@ class GLiNERInterface:
         """
         Sets up logging configuration.
         """
+        #pipeline_output_path = os.path.join(self.config['output_directory'], 'pipeline.log')
+        pipeline_output_path = 'pipeline.log'
+
+        # Create the log file and, if already existing, make it empty
+        with open(pipeline_output_path, 'w+') as f:
+            f.write('')
+
         logging.basicConfig(level=logging.INFO,
                             format='%(asctime)s - %(levelname)s - %(message)s',
                             handlers=[
                                 logging.StreamHandler(),
-                                logging.FileHandler(os.path.join(self.config['output_directory'], 'pipeline.log'))
+                                logging.FileHandler(pipeline_output_path)
                             ])
         self.logger = logging.getLogger(__name__)
 
@@ -420,7 +431,7 @@ class GLiNERInterface:
                 pred_file.write("\n")  # Separate documents by a newline
 
         print(f"\nAll predictions have been successfully written to {predictions_file_path}\n")
-        self.logger.info(f"\nAll predictions have been successfully written to {predictions_file_path}\n")
+        self.logger.info(f"All predictions have been successfully written to {predictions_file_path}")
 
 
     def save_results(self):
