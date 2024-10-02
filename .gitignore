@@ -1,2 +1,8 @@
-# ignore all files in __pycache__ folder
+# ignore all files in '__pycache__' folder
 __pycache__/
+
+# ignore all files in 'retrieved_articles' folder
+retrieved_articles/
+
+# ignore all files in 'predicted_annotations' folder
+predicted_annotations/
