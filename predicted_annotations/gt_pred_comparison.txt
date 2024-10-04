@@ -1,0 +1,656 @@
+562|t|Heat-killed Enterococcus fecalis (EC-12) supplement alters the expression of neurotransmitter receptor genes in the prefrontal cortex and alleviates anxiety-like behavior in mice .
+562|a|Gut microbiota plays a crucial role in the maintenance of mental health and influences mental disorders such as depression and anxiety. Several studies have reported the beneficial affects of probiotics in mental health. Heat-killed Enterococcus faecalis strain EC-12 (EC-12), a lactic acid bacterium induces activation of the immune system. However, little is known about the effect of EC-12 on mental health. In the present study, the anti-anxiety effect of EC-12 was elucidated in vivo. Male mice fed on diet supplemented with EC-12 showed decreased anxiety-like behavior in open-field and elevated plus-mazetest. In addition, EC-12 supplementation exhibited an anti-depressive trend in mice subjected to forced swim test. The expression of neurotransmitter receptor genes: Adrb3 and Avpr1a were significantly enhanced in EC-12 supplemented mice compared to that of the control mice. In mice, analyses of gut microbiota composition by next generation sequencing revealed significant increase in Butyricicoccus and Enterococcus with EC-12 supplementation. Significant difference was not detected in the expression of neurotransmitter receptor genes in the prefrontal cortex with the administration of sodium butyrate compared to that of the control group. The mechanism associated with EC-12 mediated reduced anxiety-like behavior and altered gene expression in the brain needs to be further elucidated. Taken together, the present study is the first to report the possibility of exploiting the anti-anxiety effect of heat-killed EC-12 as a novel probiotic to promote mental health.
+grtr	0	40	Heat-killed Enterococcus fecalis (EC-12)	bacteria
+pred	12	32	Enterococcus fecalis	bacteria	0.9062254428863525
+
+grtr	——	——	——	——	——
+pred	34	39	EC-12	dietary supplement	0.18653658032417297
+
+grtr	77	108	neurotransmitter receptor genes	gene
+pred	77	108	neurotransmitter receptor genes	gene	0.9298019409179688
+
+grtr	116	133	prefrontal cortex	anatomical location
+pred	116	133	prefrontal cortex	anatomical location	0.9811767339706421
+
+grtr	149	170	anxiety-like behavior	disease
+pred	149	170	anxiety-like behavior	disease	0.30587196350097656
+
+grtr	174	178	mice	animal
+pred	174	178	mice	animal	0.9933271408081055
+
+grtr	181	195	Gut microbiota	microbiome
+pred	181	195	Gut microbiota	microbiome	0.9677072167396545
+
+grtr	268	284	mental disorders	disease
+pred	268	284	mental disorders	disease	0.35707226395606995
+
+grtr	293	303	depression	disease
+pred	293	303	depression	disease	0.6564279794692993
+
+grtr	308	315	anxiety	disease
+pred	308	315	anxiety	disease	0.5535452961921692
+
+grtr	373	383	probiotics	dietary supplement
+pred	373	383	probiotics	dietary supplement	0.9414403438568115
+
+grtr	——	——	——	——	——
+pred	387	400	mental health	disease	0.5675173401832581
+
+grtr	402	456	Heat-killed Enterococcus faecalis strain EC-12 (EC-12)	bacteria
+pred	414	435	Enterococcus faecalis	bacteria	0.7232382297515869
+
+grtr	——	——	——	——	——
+pred	443	448	EC-12	bacteria	0.6040535569190979
+
+grtr	——	——	——	——	——
+pred	450	455	EC-12	bacteria	0.6673995852470398
+
+grtr	460	481	lactic acid bacterium	bacteria
+pred	460	481	lactic acid bacterium	bacteria	0.2809813916683197
+
+grtr	——	——	——	——	——
+pred	508	521	immune system	anatomical location	0.1581704169511795
+
+grtr	568	573	EC-12	bacteria
+pred	568	573	EC-12	drug	0.39982903003692627
+
+grtr	641	646	EC-12	bacteria
+pred	641	646	EC-12	drug	0.5662781596183777
+
+grtr	676	680	mice	animal
+pred	671	680	Male mice	animal	0.9678648710250854
+
+grtr	711	716	EC-12	bacteria
+pred	688	716	diet supplemented with EC-12	dietary supplement	0.7966020107269287
+
+grtr	734	755	anxiety-like behavior	disease
+pred	——	——	——	——	——
+
+grtr	——	——	——	——	——
+pred	759	769	open-field	assay	0.27475613355636597
+
+grtr	——	——	——	——	——
+pred	774	796	elevated plus-mazetest	assay	0.1972683072090149
+
+grtr	811	817	EC-12	bacteria
+pred	811	816	EC-12	dietary supplement	0.7040169835090637
+
+grtr	——	——	——	——	——
+pred	817	832	supplementation	intervention or procedure	0.11330392956733704
+
+grtr	871	875	mice	animal
+pred	871	875	mice	animal	0.9832509160041809
+
+grtr	——	——	——	——	——
+pred	889	905	forced swim test	assay	0.3643704652786255
+
+grtr	925	956	neurotransmitter receptor genes	gene
+pred	925	941	neurotransmitter	neurotransmitter	0.3598027527332306
+
+grtr	958	963	Adrb3	gene
+pred	958	963	Adrb3	gene	0.9855750799179077
+
+grtr	968	974	Avpr1a	gene
+pred	968	974	Avpr1a	gene	0.979323148727417
+
+grtr	1006	1029	EC-12 supplemented mice	animal
+pred	1006	1011	EC-12	dietary supplement	0.8704738020896912
+
+grtr	——	——	——	——	——
+pred	1025	1029	mice	animal	0.9150600433349609
+
+grtr	1054	1066	control mice	animal
+pred	1062	1066	mice	animal	0.9025890827178955
+
+grtr	1071	1075	mice	animal
+pred	1071	1075	mice	animal	0.9954467415809631
+
+grtr	1089	1104	gut microbiota	microbiome
+pred	1089	1115	gut microbiota composition	microbiome	0.8732668161392212
+
+grtr	1119	1145	next generation sequencing	assay
+pred	1119	1145	next generation sequencing	assay	0.7947096228599548
+
+grtr	1179	1193	Butyricicoccus	bacteria
+pred	1179	1193	Butyricicoccus	bacteria	0.9785488247871399
+
+grtr	1198	1210	Enterococcus	bacteria
+pred	1198	1210	Enterococcus	bacteria	0.9841777086257935
+
+grtr	1216	1221	EC-12	bacteria
+pred	1216	1221	EC-12	dietary supplement	0.6384345293045044
+
+grtr	——	——	——	——	——
+pred	1222	1237	supplementation	dietary supplement	0.1857609748840332
+
+grtr	1300	1331	neurotransmitter receptor genes	gene
+pred	1300	1331	neurotransmitter receptor genes	gene	0.8807980418205261
+
+grtr	1339	1356	prefrontal cortex	anatomical location
+pred	1339	1356	prefrontal cortex	anatomical location	0.9622994661331177
+
+grtr	——	——	——	——	——
+pred	1366	1380	administration	intervention or procedure	0.3611021041870117
+
+grtr	1384	1399	sodium butyrate	metabolite
+pred	1384	1399	sodium butyrate	chemical	0.8335327506065369
+
+grtr	1469	1484	EC-12 mediated	bacteria
+pred	1469	1474	EC-12	chemical	0.5509142875671387
+
+grtr	1492	1513	anxiety-like behavior	disease
+pred	——	——	——	——	——
+
+grtr	1549	1554	brain	anatomical location
+pred	1549	1554	brain	anatomical location	0.8875316977500916
+
+grtr	1701	1718	heat-killed EC-12	bacteria
+pred	1701	1718	heat-killed EC-12	dietary supplement	0.5124301910400391
+
+grtr	1730	1739	probiotic	dietary supplement
+pred	1724	1739	novel probiotic	dietary supplement	0.20832714438438416
+
+
+
+456|t|Gut microbiota in mental health and depression: role of pre/pro/synbiotics in their modulation.
+456|a|The microbiome residing in the human gut performs a wide range of biological functions. Recently, it has been elucidated that a change in dietary habits is associated with alteration in the gut microflora which results in increased health risks and vulnerability towards various diseases. Falling in line with the same concept, depression has also been shown to increase its prevalence around the globe, especially in the western world. Various research studies have suggested that changes in the gut microbiome profile further result in decreased tolerance of stress. Although currently available medications help in relieving the symptoms of depressive disorders briefly, these drugs are not able to completely reverse the multifactorial pathology of depression. The discovery of the communication pathway between gut microbes and the brain, i.e. the Gut-Brain Axis, has led to new areas of research to find more effective and safer alternatives to current antidepressants. The use of probiotics and prebiotics has been suggested as being effective in various preclinical studies and clinical trials for depression. Therefore, in the present review, we address the new antidepressant mechanisms via gut microbe alterations and provide insight into how these can provide an alternative to antidepressant therapy without the side effects and risk of adverse drug reactions.
+grtr	0	14	Gut microbiota	microbiome
+pred	0	14	Gut microbiota	microbiome	0.975732684135437
+
+grtr	——	——	——	——	——
+pred	18	31	mental health	disease	0.4080362319946289
+
+grtr	36	46	depression	disease
+pred	36	46	depression	disease	0.462649405002594
+
+grtr	56	74	pre/pro/synbiotics	dietary supplement
+pred	56	74	pre/pro/synbiotics	chemical	0.4351636469364166
+
+grtr	100	110	microbiome	microbiome
+pred	96	110	The microbiome	microbiome	0.9019055366516113
+
+grtr	127	136	human gut	anatomical location
+pred	127	132	human	human	0.8373467922210693
+
+grtr	——	——	——	——	——
+pred	133	136	gut	anatomical location	0.6036375761032104
+
+grtr	——	——	——	——	——
+pred	224	248	change in dietary habits	intervention or procedure	0.38646697998046875
+
+grtr	——	——	——	——	——
+pred	268	278	alteration	intervention or procedure	0.11016795039176941
+
+grtr	286	300	gut microflora	microbiome
+pred	286	300	gut microflora	microbiome	0.9731559157371521
+
+grtr	375	383	diseases	disease
+pred	375	383	diseases	disease	0.30817294120788574
+
+grtr	424	434	depression	disease
+pred	424	434	depression	disease	0.8906159996986389
+
+grtr	593	607	gut microbiome	microbiome
+pred	593	607	gut microbiome	microbiome	0.8835585117340088
+
+grtr	657	663	stress	disease
+pred	——	——	——	——	——
+
+grtr	694	705	medications	intervention or procedure
+pred	674	705	currently available medications	drug	0.4686456024646759
+
+grtr	740	760	depressive disorders	disease
+pred	740	760	depressive disorders	disease	0.8880194425582886
+
+grtr	776	781	drugs	drug
+pred	770	781	these drugs	drug	0.26257216930389404
+
+grtr	849	859	depression	disease
+pred	849	859	depression	disease	0.4100070893764496
+
+grtr	——	——	——	——	——
+pred	882	903	communication pathway	anatomical location	0.10707501322031021
+
+grtr	912	924	gut microbes	microbiome
+pred	912	924	gut microbes	microbiome	0.9697666764259338
+
+grtr	933	938	brain	anatomical location
+pred	933	938	brain	anatomical location	0.8221386671066284
+
+grtr	——	——	——	——	——
+pred	949	963	Gut-Brain Axis	anatomical location	0.4293425381183624
+
+grtr	1055	1070	antidepressants	drug
+pred	1055	1070	antidepressants	drug	0.7060157656669617
+
+grtr	1083	1093	probiotics	dietary supplement
+pred	1083	1093	probiotics	dietary supplement	0.8210698366165161
+
+grtr	1098	1108	prebiotics	dietary supplement
+pred	1098	1108	prebiotics	dietary supplement	0.8489225506782532
+
+grtr	——	——	——	——	——
+pred	1158	1177	preclinical studies	intervention or procedure	0.16091381013393402
+
+grtr	——	——	——	——	——
+pred	1182	1197	clinical trials	intervention or procedure	0.24130487442016602
+
+grtr	1202	1212	depression	disease
+pred	1202	1212	depression	disease	0.901093065738678
+
+grtr	——	——	——	——	——
+pred	1267	1281	antidepressant	drug	0.2544938325881958
+
+grtr	1297	1309	gut microbe	microbiome
+pred	1297	1308	gut microbe	microbiome	0.7533034086227417
+
+grtr	1386	1408	antidepressant therapy	intervention or procedure
+pred	1386	1408	antidepressant therapy	intervention or procedure	0.3023739159107208
+
+
+
+245|t|Gut-Brain Axis and Neurological Disorders-How microbiomes Affect our Mental Health.
+245|a|The gut microbiota is an essential part of the gastrointestinal tract and recent research, including clinical and preclinical studies, shed light on the interaction between the gut and the brain. A rising amount of evidence strongly proves the involvement of gut microbes in brain function and their contribution in altering behavior, mood, and ultimately in the pathogenesis of certain neurological conditions. The gut microbiota produces and modulates neurotransmitters such as GABA, serotonin, dopamine, glutamate, etc. Furthermore, there is a presence of a biological link between the microbiota, immune signaling, and CNS suggesting that microbial metabolites could regulate both neurological and immunological activities in the brain. Thus, this review focuses on the bidirectional communication between the gut and brain, its impact and role in the modulation of various neurological disorders, such as schizophrenia, depression, anxiety, etc., and attempts to explore the underlying mechanism for the same. The article also discusses studies involving germ-free mice, studies on the effects of faeces transfer of microbiota, and research involving gut microbiota composition in animal models. The effects of probiotics and prebiotics on neurological disorders are also discussed, along with the clinical studies for each of them. In a nutshell, extensive studies are required to explore this bidirectional communication between the gut and brain, which might help researchers develop new therapeutic targets in treating neurological disorders and increase our understanding of the gut-brain axis.
+grtr	——	——	——	——	——
+pred	0	14	Gut-Brain Axis	anatomical location	0.13527661561965942
+
+grtr	19	41	Neurological Disorders	disease
+pred	19	45	Neurological Disorders-How	disease	0.17237518727779388
+
+grtr	46	57	microbiomes	microbiome
+pred	46	57	microbiomes	microbiome	0.8189120888710022
+
+grtr	88	102	gut microbiota	microbiome
+pred	88	102	gut microbiota	microbiome	0.9489700794219971
+
+grtr	131	153	gastrointestinal tract	anatomical location
+pred	131	153	gastrointestinal tract	anatomical location	0.8686056137084961
+
+grtr	261	264	gut	anatomical location
+pred	261	264	gut	anatomical location	0.25687935948371887
+
+grtr	273	278	brain	anatomical location
+pred	273	278	brain	anatomical location	0.4559299051761627
+
+grtr	343	355	gut microbes	microbiome
+pred	343	355	gut microbes	microbiome	0.9688705205917358
+
+grtr	359	364	brain	anatomical location
+pred	359	373	brain function	disease	0.1899486482143402
+
+grtr	471	494	neurological conditions	disease
+pred	471	494	neurological conditions	disease	0.4220828413963318
+
+grtr	500	514	gut microbiota	microbiome
+pred	500	514	gut microbiota	microbiome	0.9568045735359192
+
+grtr	538	555	neurotransmitters	neurotransmitter
+pred	538	555	neurotransmitters	neurotransmitter	0.5241454243659973
+
+grtr	564	568	GABA	neurotransmitter
+pred	564	568	GABA	neurotransmitter	0.9712029099464417
+
+grtr	570	579	serotonin	neurotransmitter
+pred	570	579	serotonin	neurotransmitter	0.9792284965515137
+
+grtr	581	589	dopamine	neurotransmitter
+pred	581	589	dopamine	neurotransmitter	0.9755350947380066
+
+grtr	591	600	glutamate	neurotransmitter
+pred	591	600	glutamate	neurotransmitter	0.9801865220069885
+
+grtr	673	683	microbiota	microbiome
+pred	673	683	microbiota	microbiome	0.9764043688774109
+
+grtr	——	——	——	——	——
+pred	685	701	immune signaling	microbiome	0.14880253374576569
+
+grtr	707	710	CNS	anatomical location
+pred	707	710	CNS	anatomical location	0.7186838984489441
+
+grtr	727	748	microbial metabolites	metabolite
+pred	727	748	microbial metabolites	metabolite	0.9201738238334656
+
+grtr	818	823	brain	anatomical location
+pred	818	823	brain	anatomical location	0.4605710506439209
+
+grtr	898	901	gut	anatomical location
+pred	898	901	gut	anatomical location	0.7125966548919678
+
+grtr	906	911	brain	anatomical location
+pred	906	911	brain	anatomical location	0.6712549924850464
+
+grtr	962	984	neurological disorders	disease
+pred	962	984	neurological disorders	disease	0.31637194752693176
+
+grtr	994	1007	schizophrenia	disease
+pred	994	1007	schizophrenia	disease	0.9703187942504883
+
+grtr	1009	1019	depression	disease
+pred	1009	1019	depression	disease	0.9666242599487305
+
+grtr	1021	1028	anxiety	disease
+pred	1021	1028	anxiety	disease	0.9650247693061829
+
+grtr	1154	1158	mice	animal
+pred	1144	1158	germ-free mice	animal	0.9475929141044617
+
+grtr	1205	1215	microbiota	microbiome
+pred	1205	1215	microbiota	microbiome	0.8311889171600342
+
+grtr	1240	1254	gut microbiota	microbiome
+pred	1244	1254	microbiota	microbiome	0.905830979347229
+
+grtr	——	——	——	——	——
+pred	1270	1283	animal models	animal	0.18690672516822815
+
+grtr	1300	1310	probiotics	dietary supplement
+pred	1300	1310	probiotics	dietary supplement	0.8758953213691711
+
+grtr	1315	1325	prebiotics	dietary supplement
+pred	1315	1325	prebiotics	dietary supplement	0.8991878628730774
+
+grtr	1329	1351	neurological disorders	disease
+pred	1329	1351	neurological disorders	disease	0.9180148839950562
+
+grtr	——	——	——	——	——
+pred	1387	1403	clinical studies	intervention or procedure	0.21751698851585388
+
+grtr	1524	1527	gut	anatomical location
+pred	1524	1527	gut	anatomical location	0.6090726852416992
+
+grtr	1532	1537	brain	anatomical location
+pred	1532	1537	brain	anatomical location	0.6105502843856812
+
+grtr	1612	1634	neurological disorders	disease
+pred	1612	1634	neurological disorders	disease	0.8358488082885742
+
+grtr	——	——	——	——	——
+pred	1673	1682	gut-brain	anatomical location	0.23134805262088776
+
+
+
+672|t|Bifidobacterium in the gut microbiota confer resilience to chronic social defeat stress in mice.
+672|a|Accumulating evidence suggests that abnormalities in the composition of the gut microbiota may play a role in the pathogenesis of depression. Although approximately 30% mice are resilient to chronic social defeat stress (CSDS), the role of gut microbiota in this stress resilience is unknown. In this study, male C57BL/6 mice were exposed to a different CD1 aggressor mouse for 10 min on 10 consecutive days. A social interaction test was applied to distinguish between resilient and susceptible mice. Using 16S rRNA analysis, we examined the composition of gut microbiota in feces from control, resilient, and susceptible mice. The marked appearance of Bifidobacterium was detected in the resilient mice, whereas in the control and susceptible mice, Bifidobacterium were below the detection limit. Oral intake of Bifidobacterium significantly increased the number of resilient mice after CSDS compared with vehicle-treated mice. These findings suggest that Bifidobacterium may confer resilience to CSDS. Therefore, supplementation of Bifidobacterium may prevent the onset of depression from stress in humans. In addition, supplementation of Bifidobacterium may prevent or minimize relapse from remission induced by inflammation and/or stress in depressed patients.
+grtr	0	15	Bifidobacterium	bacteria
+pred	0	15	Bifidobacterium	bacteria	0.9507235884666443
+
+grtr	23	37	gut microbiota	microbiome
+pred	23	37	gut microbiota	microbiome	0.9869219064712524
+
+grtr	——	——	——	——	——
+pred	59	87	chronic social defeat stress	intervention or procedure	0.10911376774311066
+
+grtr	91	95	mice	animal
+pred	91	95	mice	animal	0.9976623058319092
+
+grtr	173	187	gut microbiota	microbiome
+pred	173	187	gut microbiota	microbiome	0.974550724029541
+
+grtr	227	237	depression	disease
+pred	227	237	depression	disease	0.8560967445373535
+
+grtr	266	270	mice	animal
+pred	266	270	mice	animal	0.9881911277770996
+
+grtr	——	——	——	——	——
+pred	288	316	chronic social defeat stress	disease	0.15380391478538513
+
+grtr	——	——	——	——	——
+pred	318	322	CSDS	disease	0.2120203673839569
+
+grtr	337	351	gut microbiota	microbiome
+pred	337	351	gut microbiota	microbiome	0.9856873154640198
+
+grtr	405	422	male C57BL/6 mice	animal
+pred	405	422	male C57BL/6 mice	animal	0.8603277802467346
+
+grtr	451	470	CD1 aggressor mouse	animal
+pred	451	470	CD1 aggressor mouse	animal	0.871491014957428
+
+grtr	——	——	——	——	——
+pred	508	531	social interaction test	intervention or procedure	0.21847845613956451
+
+grtr	593	597	mice	animal
+pred	593	597	mice	animal	0.8970712423324585
+
+grtr	605	622	16S rRNA analysis	assay
+pred	605	622	16S rRNA analysis	assay	0.9005616307258606
+
+grtr	655	669	gut microbiota	microbiome
+pred	655	669	gut microbiota	microbiome	0.9853647351264954
+
+grtr	——	——	——	——	——
+pred	684	691	control	animal	0.342499703168869
+
+grtr	——	——	——	——	——
+pred	693	702	resilient	animal	0.33751991391181946
+
+grtr	——	——	——	——	——
+pred	708	719	susceptible	animal	0.1060662567615509
+
+grtr	720	724	mice	animal
+pred	720	724	mice	animal	0.8912796378135681
+
+grtr	751	766	Bifidobacterium	bacteria
+pred	751	766	Bifidobacterium	bacteria	0.9816778302192688
+
+grtr	787	801	resilient mice	animal
+pred	787	801	resilient mice	animal	0.9765655398368835
+
+grtr	830	841	susceptible	animal
+pred	830	846	susceptible mice	animal	0.9580475687980652
+
+grtr	842	846	mice	animal
+pred	——	——	——	——	——
+
+grtr	848	863	Bifidobacterium	bacteria
+pred	848	863	Bifidobacterium	bacteria	0.9831598401069641
+
+grtr	——	——	——	——	——
+pred	896	907	Oral intake	dietary supplement	0.6599042415618896
+
+grtr	911	926	Bifidobacterium	bacteria
+pred	911	926	Bifidobacterium	bacteria	0.9697377681732178
+
+grtr	965	979	resilient mice	animal
+pred	965	979	resilient mice	animal	0.9474561214447021
+
+grtr	——	——	——	——	——
+pred	986	990	CSDS	intervention or procedure	0.5676906704902649
+
+grtr	1005	1025	vehicle-treated mice	animal
+pred	1021	1025	mice	animal	0.8011071681976318
+
+grtr	1055	1070	Bifidobacterium	bacteria
+pred	1055	1070	Bifidobacterium	bacteria	0.9842699766159058
+
+grtr	——	——	——	——	——
+pred	1096	1100	CSDS	disease	0.9488690495491028
+
+grtr	——	——	——	——	——
+pred	1113	1128	supplementation	intervention or procedure	0.7049967050552368
+
+grtr	1132	1147	Bifidobacterium	bacteria
+pred	1132	1147	Bifidobacterium	bacteria	0.9509402513504028
+
+grtr	1173	1183	depression	disease
+pred	1173	1183	depression	disease	0.9264636039733887
+
+grtr	1189	1195	stress	disease
+pred	——	——	——	——	——
+
+grtr	1199	1205	humans	human
+pred	1199	1205	humans	human	0.9568619728088379
+
+grtr	——	——	——	——	——
+pred	1220	1235	supplementation	intervention or procedure	0.512098491191864
+
+grtr	1239	1254	Bifidobacterium	bacteria
+pred	1239	1254	Bifidobacterium	bacteria	0.9599703550338745
+
+grtr	——	——	——	——	——
+pred	1279	1286	relapse	disease	0.10289758443832397
+
+grtr	——	——	——	——	——
+pred	1292	1301	remission	disease	0.10449383407831192
+
+grtr	1313	1325	inflammation	disease
+pred	1313	1325	inflammation	disease	0.6981720328330994
+
+grtr	1333	1339	stress	disease
+pred	1333	1339	stress	disease	0.3239142894744873
+
+grtr	——	——	——	——	——
+pred	1343	1361	depressed patients	human	0.8910529017448425
+
+
+
+113|t|The Gut-Brain Axis in Schizophrenia: The Implications of the Gut microbiome and SCFA Production.
+113|a|Schizophrenia, a severe mental illness affecting about 1% of the population, manifests during young adulthood, leading to abnormal mental function and behavior. Its multifactorial etiology involves genetic factors, experiences of adversity, infection, and gene-environment interactions. Emerging research indicates that maternal infection or stress during pregnancy may also increase schizophrenia risk in offspring. Recent research on the gut-brain axis highlights the gut microbiome's potential influence on central nervous system (CNS) function and mental health, including schizophrenia. The gut microbiota, located in the digestive system, has a significant role to play in human physiology, affecting immune system development, vitamin synthesis, and protection against pathogenic bacteria. Disruptions to the gut microbiota, caused by diet, medication use, environmental pollutants, and stress, may lead to imbalances with far-reaching effects on CNS function and mental health. Of interest are short-chain fatty acids (SCFAs), metabolic byproducts produced by gut microbes during fermentation. SCFAs can cross the blood-brain barrier, influencing CNS activity, including microglia and cytokine modulation. The dysregulation of neurotransmitters produced by gut microbes may contribute to CNS disorders, including schizophrenia. This review explores the potential relationship between SCFAs, the gut microbiome, and schizophrenia. Our aim is to deepen the understanding of the gut-brain axis in schizophrenia and to elucidate its implications for future research and therapeutic approaches.
+grtr	——	——	——	——	——
+pred	4	18	Gut-Brain Axis	anatomical location	0.32664355635643005
+
+grtr	22	35	Schizophrenia	disease
+pred	22	35	Schizophrenia	disease	0.9692773818969727
+
+grtr	61	75	Gut microbiome	microbiome
+pred	61	75	Gut microbiome	microbiome	0.9662335515022278
+
+grtr	80	84	SCFA	metabolite
+pred	80	84	SCFA	metabolite	0.6526514887809753
+
+grtr	97	110	Schizophrenia	disease
+pred	97	110	Schizophrenia	disease	0.9242193102836609
+
+grtr	121	135	mental illness	disease
+pred	114	135	severe mental illness	disease	0.22596855461597443
+
+grtr	——	——	——	——	——
+pred	162	172	population	human	0.14920015633106232
+
+grtr	——	——	——	——	——
+pred	295	310	genetic factors	disease	0.27249735593795776
+
+grtr	338	347	infection	disease
+pred	338	347	infection	disease	0.2440652847290039
+
+grtr	——	——	——	——	——
+pred	353	382	gene-environment interactions	disease	0.13926534354686737
+
+grtr	426	435	infection	disease
+pred	——	——	——	——	——
+
+grtr	439	445	stress	disease
+pred	——	——	——	——	——
+
+grtr	481	494	schizophrenia	disease
+pred	481	494	schizophrenia	disease	0.8751183748245239
+
+grtr	——	——	——	——	——
+pred	503	512	offspring	human	0.7380497455596924
+
+grtr	——	——	——	——	——
+pred	537	551	gut-brain axis	microbiome	0.27808621525764465
+
+grtr	567	583	gut microbiome's	microbiome
+pred	567	581	gut microbiome	microbiome	0.9528731107711792
+
+grtr	607	629	central nervous system	anatomical location
+pred	607	629	central nervous system	anatomical location	0.45473888516426086
+
+grtr	631	634	CNS	anatomical location
+pred	631	634	CNS	anatomical location	0.30819448828697205
+
+grtr	674	687	schizophrenia	disease
+pred	674	687	schizophrenia	disease	0.8837597966194153
+
+grtr	693	707	gut microbiota	microbiome
+pred	693	707	gut microbiota	microbiome	0.9531553983688354
+
+grtr	——	——	——	——	——
+pred	724	740	digestive system	anatomical location	0.9393300414085388
+
+grtr	——	——	——	——	——
+pred	776	781	human	human	0.963701605796814
+
+grtr	873	892	pathogenic bacteria	bacteria
+pred	873	892	pathogenic bacteria	bacteria	0.9465755224227905
+
+grtr	——	——	——	——	——
+pred	894	905	Disruptions	intervention or procedure	0.19756793975830078
+
+grtr	913	927	gut microbiota	microbiome
+pred	913	927	gut microbiota	microbiome	0.9850416779518127
+
+grtr	——	——	——	——	——
+pred	939	943	diet	intervention or procedure	0.4874624013900757
+
+grtr	——	——	——	——	——
+pred	945	959	medication use	intervention or procedure	0.4629691243171692
+
+grtr	——	——	——	——	——
+pred	961	985	environmental pollutants	intervention or procedure	0.2494863122701645
+
+grtr	991	997	stress	disease
+pred	991	997	stress	intervention or procedure	0.2000156044960022
+
+grtr	1051	1054	CNS	anatomical location
+pred	——	——	——	——	——
+
+grtr	1099	1130	short-chain fatty acids (SCFAs)	metabolite
+pred	1099	1122	short-chain fatty acids	metabolite	0.5301159024238586
+
+grtr	——	——	——	——	——
+pred	1124	1129	SCFAs	metabolite	0.683262825012207
+
+grtr	——	——	——	——	——
+pred	1132	1152	metabolic byproducts	metabolite	0.458148717880249
+
+grtr	1165	1177	gut microbes	microbiome
+pred	1165	1177	gut microbes	microbiome	0.9893103837966919
+
+grtr	1199	1203	SCFA	metabolite
+pred	1199	1204	SCFAs	chemical	0.8167169690132141
+
+grtr	1203	1204	s	animal
+pred	——	——	——	——	——
+
+grtr	——	——	——	——	——
+pred	1219	1238	blood-brain barrier	anatomical location	0.8238453269004822
+
+grtr	1252	1255	CNS	anatomical location
+pred	1252	1255	CNS	anatomical location	0.17933988571166992
+
+grtr	——	——	——	——	——
+pred	1276	1285	microglia	anatomical location	0.16726110875606537
+
+grtr	1332	1349	neurotransmitters	neurotransmitter
+pred	1332	1349	neurotransmitters	neurotransmitter	0.8839090466499329
+
+grtr	1362	1374	gut microbes	microbiome
+pred	1362	1374	gut microbes	microbiome	0.8898301124572754
+
+grtr	1393	1406	CNS disorders	disease
+pred	1393	1406	CNS disorders	disease	0.8212833404541016
+
+grtr	1418	1431	schizophrenia	disease
+pred	1418	1431	schizophrenia	disease	0.9285043478012085
+
+grtr	1489	1494	SCFAs	metabolite
+pred	1489	1494	SCFAs	chemical	0.7470073103904724
+
+grtr	1500	1514	gut microbiome	microbiome
+pred	1500	1514	gut microbiome	microbiome	0.989556610584259
+
+grtr	1520	1533	schizophrenia	disease
+pred	1520	1533	schizophrenia	disease	0.8645620942115784
+
+grtr	——	——	——	——	——
+pred	1581	1595	gut-brain axis	anatomical location	0.21264608204364777
+
+grtr	1599	1612	schizophrenia	disease
+pred	1599	1612	schizophrenia	disease	0.9728788733482361
+
+
+

@@ -2,10 +2,12 @@
 __pycache__/
 
 # ignore all files in 'retrieved_articles' folder
-retrieved_articles/
+#retrieved_articles/
 
 # ignore all files in 'predicted_annotations' folder
-predicted_annotations/
+#predicted_annotations/
 
 # ignore all .log files
 *.log
+retrieved_articles/retrieved_articles.csv
+retrieved_articles/retrieved_articles.txt

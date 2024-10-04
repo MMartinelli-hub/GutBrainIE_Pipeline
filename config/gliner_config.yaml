@@ -5,7 +5,7 @@ processing: "sentence"  # options: document, sentence, label
 flat_ner: True         # Whether to perform Flat NER, i.e., no overlapping entities
 multi_label: False     # Whether to perform multi-label extraction, i.e., multiple labels for the same entity
 
-corpus_file_path: "retrieved_articles/annotations_test.txt"
+corpus_file_path: "retrieved_articles/vanessa_annotations.txt"
 output_directory: "predicted_annotations"
 include_configuration_in_output: False
 

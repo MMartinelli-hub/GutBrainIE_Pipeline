@@ -1,0 +1,218 @@
+562|t|Heat-killed Enterococcus fecalis (EC-12) supplement alters the expression of neurotransmitter receptor genes in the prefrontal cortex and alleviates anxiety-like behavior in mice .
+562|a|Gut microbiota plays a crucial role in the maintenance of mental health and influences mental disorders such as depression and anxiety. Several studies have reported the beneficial affects of probiotics in mental health. Heat-killed Enterococcus faecalis strain EC-12 (EC-12), a lactic acid bacterium induces activation of the immune system. However, little is known about the effect of EC-12 on mental health. In the present study, the anti-anxiety effect of EC-12 was elucidated in vivo. Male mice fed on diet supplemented with EC-12 showed decreased anxiety-like behavior in open-field and elevated plus-mazetest. In addition, EC-12 supplementation exhibited an anti-depressive trend in mice subjected to forced swim test. The expression of neurotransmitter receptor genes: Adrb3 and Avpr1a were significantly enhanced in EC-12 supplemented mice compared to that of the control mice. In mice, analyses of gut microbiota composition by next generation sequencing revealed significant increase in Butyricicoccus and Enterococcus with EC-12 supplementation. Significant difference was not detected in the expression of neurotransmitter receptor genes in the prefrontal cortex with the administration of sodium butyrate compared to that of the control group. The mechanism associated with EC-12 mediated reduced anxiety-like behavior and altered gene expression in the brain needs to be further elucidated. Taken together, the present study is the first to report the possibility of exploiting the anti-anxiety effect of heat-killed EC-12 as a novel probiotic to promote mental health.
+562	12	32	Enterococcus fecalis	bacteria	0.9062254428863525
+562	34	39	EC-12	dietary supplement	0.18653658032417297
+562	77	108	neurotransmitter receptor genes	gene	0.9298019409179688
+562	116	133	prefrontal cortex	anatomical location	0.9811767339706421
+562	149	170	anxiety-like behavior	disease	0.30587196350097656
+562	174	178	mice	animal	0.9933271408081055
+562	181	195	Gut microbiota	microbiome	0.9677072167396545
+562	268	284	mental disorders	disease	0.35707226395606995
+562	293	303	depression	disease	0.6564279794692993
+562	308	315	anxiety	disease	0.5535452961921692
+562	373	383	probiotics	dietary supplement	0.9414403438568115
+562	387	400	mental health	disease	0.5675173401832581
+562	414	435	Enterococcus faecalis	bacteria	0.7232382297515869
+562	443	448	EC-12	bacteria	0.6040535569190979
+562	450	455	EC-12	bacteria	0.6673995852470398
+562	460	481	lactic acid bacterium	bacteria	0.2809813916683197
+562	508	521	immune system	anatomical location	0.1581704169511795
+562	568	573	EC-12	drug	0.39982903003692627
+562	641	646	EC-12	drug	0.5662781596183777
+562	671	680	Male mice	animal	0.9678648710250854
+562	688	716	diet supplemented with EC-12	dietary supplement	0.7966020107269287
+562	759	769	open-field	assay	0.27475613355636597
+562	774	796	elevated plus-mazetest	assay	0.1972683072090149
+562	811	816	EC-12	dietary supplement	0.7040169835090637
+562	817	832	supplementation	intervention or procedure	0.11330392956733704
+562	871	875	mice	animal	0.9832509160041809
+562	889	905	forced swim test	assay	0.3643704652786255
+562	925	941	neurotransmitter	neurotransmitter	0.3598027527332306
+562	958	963	Adrb3	gene	0.9855750799179077
+562	968	974	Avpr1a	gene	0.979323148727417
+562	1006	1011	EC-12	dietary supplement	0.8704738020896912
+562	1025	1029	mice	animal	0.9150600433349609
+562	1062	1066	mice	animal	0.9025890827178955
+562	1071	1075	mice	animal	0.9954467415809631
+562	1089	1115	gut microbiota composition	microbiome	0.8732668161392212
+562	1119	1145	next generation sequencing	assay	0.7947096228599548
+562	1179	1193	Butyricicoccus	bacteria	0.9785488247871399
+562	1198	1210	Enterococcus	bacteria	0.9841777086257935
+562	1216	1221	EC-12	dietary supplement	0.6384345293045044
+562	1222	1237	supplementation	dietary supplement	0.1857609748840332
+562	1300	1331	neurotransmitter receptor genes	gene	0.8807980418205261
+562	1339	1356	prefrontal cortex	anatomical location	0.9622994661331177
+562	1366	1380	administration	intervention or procedure	0.3611021041870117
+562	1384	1399	sodium butyrate	chemical	0.8335327506065369
+562	1469	1474	EC-12	chemical	0.5509142875671387
+562	1549	1554	brain	anatomical location	0.8875316977500916
+562	1701	1718	heat-killed EC-12	dietary supplement	0.5124301910400391
+562	1724	1739	novel probiotic	dietary supplement	0.20832714438438416
+
+456|t|Gut microbiota in mental health and depression: role of pre/pro/synbiotics in their modulation.
+456|a|The microbiome residing in the human gut performs a wide range of biological functions. Recently, it has been elucidated that a change in dietary habits is associated with alteration in the gut microflora which results in increased health risks and vulnerability towards various diseases. Falling in line with the same concept, depression has also been shown to increase its prevalence around the globe, especially in the western world. Various research studies have suggested that changes in the gut microbiome profile further result in decreased tolerance of stress. Although currently available medications help in relieving the symptoms of depressive disorders briefly, these drugs are not able to completely reverse the multifactorial pathology of depression. The discovery of the communication pathway between gut microbes and the brain, i.e. the Gut-Brain Axis, has led to new areas of research to find more effective and safer alternatives to current antidepressants. The use of probiotics and prebiotics has been suggested as being effective in various preclinical studies and clinical trials for depression. Therefore, in the present review, we address the new antidepressant mechanisms via gut microbe alterations and provide insight into how these can provide an alternative to antidepressant therapy without the side effects and risk of adverse drug reactions.
+456	0	14	Gut microbiota	microbiome	0.975732684135437
+456	18	31	mental health	disease	0.4080362319946289
+456	36	46	depression	disease	0.462649405002594
+456	56	74	pre/pro/synbiotics	chemical	0.4351636469364166
+456	96	110	The microbiome	microbiome	0.9019055366516113
+456	127	132	human	human	0.8373467922210693
+456	133	136	gut	anatomical location	0.6036375761032104
+456	224	248	change in dietary habits	intervention or procedure	0.38646697998046875
+456	268	278	alteration	intervention or procedure	0.11016795039176941
+456	286	300	gut microflora	microbiome	0.9731559157371521
+456	375	383	diseases	disease	0.30817294120788574
+456	424	434	depression	disease	0.8906159996986389
+456	593	607	gut microbiome	microbiome	0.8835585117340088
+456	674	705	currently available medications	drug	0.4686456024646759
+456	740	760	depressive disorders	disease	0.8880194425582886
+456	770	781	these drugs	drug	0.26257216930389404
+456	849	859	depression	disease	0.4100070893764496
+456	882	903	communication pathway	anatomical location	0.10707501322031021
+456	912	924	gut microbes	microbiome	0.9697666764259338
+456	933	938	brain	anatomical location	0.8221386671066284
+456	949	963	Gut-Brain Axis	anatomical location	0.4293425381183624
+456	1055	1070	antidepressants	drug	0.7060157656669617
+456	1083	1093	probiotics	dietary supplement	0.8210698366165161
+456	1098	1108	prebiotics	dietary supplement	0.8489225506782532
+456	1158	1177	preclinical studies	intervention or procedure	0.16091381013393402
+456	1182	1197	clinical trials	intervention or procedure	0.24130487442016602
+456	1202	1212	depression	disease	0.901093065738678
+456	1267	1281	antidepressant	drug	0.2544938325881958
+456	1297	1308	gut microbe	microbiome	0.7533034086227417
+456	1386	1408	antidepressant therapy	intervention or procedure	0.3023739159107208
+
+245|t|Gut-Brain Axis and Neurological Disorders-How microbiomes Affect our Mental Health.
+245|a|The gut microbiota is an essential part of the gastrointestinal tract and recent research, including clinical and preclinical studies, shed light on the interaction between the gut and the brain. A rising amount of evidence strongly proves the involvement of gut microbes in brain function and their contribution in altering behavior, mood, and ultimately in the pathogenesis of certain neurological conditions. The gut microbiota produces and modulates neurotransmitters such as GABA, serotonin, dopamine, glutamate, etc. Furthermore, there is a presence of a biological link between the microbiota, immune signaling, and CNS suggesting that microbial metabolites could regulate both neurological and immunological activities in the brain. Thus, this review focuses on the bidirectional communication between the gut and brain, its impact and role in the modulation of various neurological disorders, such as schizophrenia, depression, anxiety, etc., and attempts to explore the underlying mechanism for the same. The article also discusses studies involving germ-free mice, studies on the effects of faeces transfer of microbiota, and research involving gut microbiota composition in animal models. The effects of probiotics and prebiotics on neurological disorders are also discussed, along with the clinical studies for each of them. In a nutshell, extensive studies are required to explore this bidirectional communication between the gut and brain, which might help researchers develop new therapeutic targets in treating neurological disorders and increase our understanding of the gut-brain axis.
+245	0	14	Gut-Brain Axis	anatomical location	0.13527661561965942
+245	19	45	Neurological Disorders-How	disease	0.17237518727779388
+245	46	57	microbiomes	microbiome	0.8189120888710022
+245	88	102	gut microbiota	microbiome	0.9489700794219971
+245	131	153	gastrointestinal tract	anatomical location	0.8686056137084961
+245	261	264	gut	anatomical location	0.25687935948371887
+245	273	278	brain	anatomical location	0.4559299051761627
+245	343	355	gut microbes	microbiome	0.9688705205917358
+245	359	373	brain function	disease	0.1899486482143402
+245	471	494	neurological conditions	disease	0.4220828413963318
+245	500	514	gut microbiota	microbiome	0.9568045735359192
+245	538	555	neurotransmitters	neurotransmitter	0.5241454243659973
+245	564	568	GABA	neurotransmitter	0.9712029099464417
+245	570	579	serotonin	neurotransmitter	0.9792284965515137
+245	581	589	dopamine	neurotransmitter	0.9755350947380066
+245	591	600	glutamate	neurotransmitter	0.9801865220069885
+245	673	683	microbiota	microbiome	0.9764043688774109
+245	685	701	immune signaling	microbiome	0.14880253374576569
+245	707	710	CNS	anatomical location	0.7186838984489441
+245	727	748	microbial metabolites	metabolite	0.9201738238334656
+245	818	823	brain	anatomical location	0.4605710506439209
+245	898	901	gut	anatomical location	0.7125966548919678
+245	906	911	brain	anatomical location	0.6712549924850464
+245	962	984	neurological disorders	disease	0.31637194752693176
+245	994	1007	schizophrenia	disease	0.9703187942504883
+245	1009	1019	depression	disease	0.9666242599487305
+245	1021	1028	anxiety	disease	0.9650247693061829
+245	1144	1158	germ-free mice	animal	0.9475929141044617
+245	1205	1215	microbiota	microbiome	0.8311889171600342
+245	1244	1254	microbiota	microbiome	0.905830979347229
+245	1270	1283	animal models	animal	0.18690672516822815
+245	1300	1310	probiotics	dietary supplement	0.8758953213691711
+245	1315	1325	prebiotics	dietary supplement	0.8991878628730774
+245	1329	1351	neurological disorders	disease	0.9180148839950562
+245	1387	1403	clinical studies	intervention or procedure	0.21751698851585388
+245	1524	1527	gut	anatomical location	0.6090726852416992
+245	1532	1537	brain	anatomical location	0.6105502843856812
+245	1612	1634	neurological disorders	disease	0.8358488082885742
+245	1673	1682	gut-brain	anatomical location	0.23134805262088776
+
+672|t|Bifidobacterium in the gut microbiota confer resilience to chronic social defeat stress in mice.
+672|a|Accumulating evidence suggests that abnormalities in the composition of the gut microbiota may play a role in the pathogenesis of depression. Although approximately 30% mice are resilient to chronic social defeat stress (CSDS), the role of gut microbiota in this stress resilience is unknown. In this study, male C57BL/6 mice were exposed to a different CD1 aggressor mouse for 10 min on 10 consecutive days. A social interaction test was applied to distinguish between resilient and susceptible mice. Using 16S rRNA analysis, we examined the composition of gut microbiota in feces from control, resilient, and susceptible mice. The marked appearance of Bifidobacterium was detected in the resilient mice, whereas in the control and susceptible mice, Bifidobacterium were below the detection limit. Oral intake of Bifidobacterium significantly increased the number of resilient mice after CSDS compared with vehicle-treated mice. These findings suggest that Bifidobacterium may confer resilience to CSDS. Therefore, supplementation of Bifidobacterium may prevent the onset of depression from stress in humans. In addition, supplementation of Bifidobacterium may prevent or minimize relapse from remission induced by inflammation and/or stress in depressed patients.
+672	0	15	Bifidobacterium	bacteria	0.9507235884666443
+672	23	37	gut microbiota	microbiome	0.9869219064712524
+672	59	87	chronic social defeat stress	intervention or procedure	0.10911376774311066
+672	91	95	mice	animal	0.9976623058319092
+672	173	187	gut microbiota	microbiome	0.974550724029541
+672	227	237	depression	disease	0.8560967445373535
+672	266	270	mice	animal	0.9881911277770996
+672	288	316	chronic social defeat stress	disease	0.15380391478538513
+672	318	322	CSDS	disease	0.2120203673839569
+672	337	351	gut microbiota	microbiome	0.9856873154640198
+672	405	422	male C57BL/6 mice	animal	0.8603277802467346
+672	451	470	CD1 aggressor mouse	animal	0.871491014957428
+672	508	531	social interaction test	intervention or procedure	0.21847845613956451
+672	593	597	mice	animal	0.8970712423324585
+672	605	622	16S rRNA analysis	assay	0.9005616307258606
+672	655	669	gut microbiota	microbiome	0.9853647351264954
+672	684	691	control	animal	0.342499703168869
+672	693	702	resilient	animal	0.33751991391181946
+672	708	719	susceptible	animal	0.1060662567615509
+672	720	724	mice	animal	0.8912796378135681
+672	751	766	Bifidobacterium	bacteria	0.9816778302192688
+672	787	801	resilient mice	animal	0.9765655398368835
+672	830	846	susceptible mice	animal	0.9580475687980652
+672	848	863	Bifidobacterium	bacteria	0.9831598401069641
+672	896	907	Oral intake	dietary supplement	0.6599042415618896
+672	911	926	Bifidobacterium	bacteria	0.9697377681732178
+672	965	979	resilient mice	animal	0.9474561214447021
+672	986	990	CSDS	intervention or procedure	0.5676906704902649
+672	1021	1025	mice	animal	0.8011071681976318
+672	1055	1070	Bifidobacterium	bacteria	0.9842699766159058
+672	1096	1100	CSDS	disease	0.9488690495491028
+672	1113	1128	supplementation	intervention or procedure	0.7049967050552368
+672	1132	1147	Bifidobacterium	bacteria	0.9509402513504028
+672	1173	1183	depression	disease	0.9264636039733887
+672	1199	1205	humans	human	0.9568619728088379
+672	1220	1235	supplementation	intervention or procedure	0.512098491191864
+672	1239	1254	Bifidobacterium	bacteria	0.9599703550338745
+672	1279	1286	relapse	disease	0.10289758443832397
+672	1292	1301	remission	disease	0.10449383407831192
+672	1313	1325	inflammation	disease	0.6981720328330994
+672	1333	1339	stress	disease	0.3239142894744873
+672	1343	1361	depressed patients	human	0.8910529017448425
+
+113|t|The Gut-Brain Axis in Schizophrenia: The Implications of the Gut microbiome and SCFA Production.
+113|a|Schizophrenia, a severe mental illness affecting about 1% of the population, manifests during young adulthood, leading to abnormal mental function and behavior. Its multifactorial etiology involves genetic factors, experiences of adversity, infection, and gene-environment interactions. Emerging research indicates that maternal infection or stress during pregnancy may also increase schizophrenia risk in offspring. Recent research on the gut-brain axis highlights the gut microbiome's potential influence on central nervous system (CNS) function and mental health, including schizophrenia. The gut microbiota, located in the digestive system, has a significant role to play in human physiology, affecting immune system development, vitamin synthesis, and protection against pathogenic bacteria. Disruptions to the gut microbiota, caused by diet, medication use, environmental pollutants, and stress, may lead to imbalances with far-reaching effects on CNS function and mental health. Of interest are short-chain fatty acids (SCFAs), metabolic byproducts produced by gut microbes during fermentation. SCFAs can cross the blood-brain barrier, influencing CNS activity, including microglia and cytokine modulation. The dysregulation of neurotransmitters produced by gut microbes may contribute to CNS disorders, including schizophrenia. This review explores the potential relationship between SCFAs, the gut microbiome, and schizophrenia. Our aim is to deepen the understanding of the gut-brain axis in schizophrenia and to elucidate its implications for future research and therapeutic approaches.
+113	4	18	Gut-Brain Axis	anatomical location	0.32664355635643005
+113	22	35	Schizophrenia	disease	0.9692773818969727
+113	61	75	Gut microbiome	microbiome	0.9662335515022278
+113	80	84	SCFA	metabolite	0.6526514887809753
+113	97	110	Schizophrenia	disease	0.9242193102836609
+113	114	135	severe mental illness	disease	0.22596855461597443
+113	162	172	population	human	0.14920015633106232
+113	295	310	genetic factors	disease	0.27249735593795776
+113	338	347	infection	disease	0.2440652847290039
+113	353	382	gene-environment interactions	disease	0.13926534354686737
+113	481	494	schizophrenia	disease	0.8751183748245239
+113	503	512	offspring	human	0.7380497455596924
+113	537	551	gut-brain axis	microbiome	0.27808621525764465
+113	567	581	gut microbiome	microbiome	0.9528731107711792
+113	607	629	central nervous system	anatomical location	0.45473888516426086
+113	631	634	CNS	anatomical location	0.30819448828697205
+113	674	687	schizophrenia	disease	0.8837597966194153
+113	693	707	gut microbiota	microbiome	0.9531553983688354
+113	724	740	digestive system	anatomical location	0.9393300414085388
+113	776	781	human	human	0.963701605796814
+113	873	892	pathogenic bacteria	bacteria	0.9465755224227905
+113	894	905	Disruptions	intervention or procedure	0.19756793975830078
+113	913	927	gut microbiota	microbiome	0.9850416779518127
+113	939	943	diet	intervention or procedure	0.4874624013900757
+113	945	959	medication use	intervention or procedure	0.4629691243171692
+113	961	985	environmental pollutants	intervention or procedure	0.2494863122701645
+113	991	997	stress	intervention or procedure	0.2000156044960022
+113	1099	1122	short-chain fatty acids	metabolite	0.5301159024238586
+113	1124	1129	SCFAs	metabolite	0.683262825012207
+113	1132	1152	metabolic byproducts	metabolite	0.458148717880249
+113	1165	1177	gut microbes	microbiome	0.9893103837966919
+113	1199	1204	SCFAs	chemical	0.8167169690132141
+113	1219	1238	blood-brain barrier	anatomical location	0.8238453269004822
+113	1252	1255	CNS	anatomical location	0.17933988571166992
+113	1276	1285	microglia	anatomical location	0.16726110875606537
+113	1332	1349	neurotransmitters	neurotransmitter	0.8839090466499329
+113	1362	1374	gut microbes	microbiome	0.8898301124572754
+113	1393	1406	CNS disorders	disease	0.8212833404541016
+113	1418	1431	schizophrenia	disease	0.9285043478012085
+113	1489	1494	SCFAs	chemical	0.7470073103904724
+113	1500	1514	gut microbiome	microbiome	0.989556610584259
+113	1520	1533	schizophrenia	disease	0.8645620942115784
+113	1581	1595	gut-brain axis	anatomical location	0.21264608204364777
+113	1599	1612	schizophrenia	disease	0.9728788733482361
+
