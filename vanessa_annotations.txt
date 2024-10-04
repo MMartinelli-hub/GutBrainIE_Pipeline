@@ -1,0 +1,168 @@
+562|t|Heat-killed Enterococcus fecalis (EC-12) supplement alters the expression of neurotransmitter receptor genes in the prefrontal cortex and alleviates anxiety-like behavior in mice . 
+562|a|Gut microbiota plays a crucial role in the maintenance of mental health and influences mental disorders such as depression and anxiety. Several studies have reported the beneficial affects of probiotics in mental health. Heat-killed Enterococcus faecalis strain EC-12 (EC-12), a lactic acid bacterium induces activation of the immune system. However, little is known about the effect of EC-12 on mental health. In the present study, the anti-anxiety effect of EC-12 was elucidated in vivo. Male mice fed on diet supplemented with EC-12 showed decreased anxiety-like behavior in open-field and elevated plus-mazetest. In addition, EC-12 supplementation exhibited an anti-depressive trend in mice subjected to forced swim test. The expression of neurotransmitter receptor genes: Adrb3 and Avpr1a were significantly enhanced in EC-12 supplemented mice compared to that of the control mice. In mice, analyses of gut microbiota composition by next generation sequencing revealed significant increase in Butyricicoccus and Enterococcus with EC-12 supplementation. Significant difference was not detected in the expression of neurotransmitter receptor genes in the prefrontal cortex with the administration of sodium butyrate compared to that of the control group. The mechanism associated with EC-12 mediated reduced anxiety-like behavior and altered gene expression in the brain needs to be further elucidated. Taken together, the present study is the first to report the possibility of exploiting the anti-anxiety effect of heat-killed EC-12 as a novel probiotic to promote mental health.
+562	0	40	Heat-killed Enterococcus fecalis (EC-12)	bacteria
+562	77	108	neurotransmitter receptor genes	gene
+562	116	133	prefrontal cortex	anatomical location
+562	149	170	anxiety-like behavior	disease
+562	174	178	mice	animal
+562	181	195	Gut microbiota	microbiome
+562	268	284	mental disorders	disease
+562	293	303	depression	disease
+562	308	315	anxiety	disease
+562	373	383	probiotics	dietary supplement
+562	402	456	Heat-killed Enterococcus faecalis strain EC-12 (EC-12)	bacteria
+562	460	481	lactic acid bacterium	bacteria
+562	568	573	EC-12	bacteria
+562	641	646	EC-12	bacteria
+562	676	680	mice	animal
+562	711	716	EC-12	bacteria
+562	734	755	anxiety-like behavior	disease
+562	811	817	EC-12	bacteria
+562	871	875	mice	animal
+562	925	956	neurotransmitter receptor genes	gene
+562	958	963	Adrb3	gene
+562	968	974	Avpr1a	gene
+562	1006	1029	EC-12 supplemented mice	animal
+562	1054	1066	control mice	animal
+562	1071	1075	mice	animal
+562	1089	1104	gut microbiota	microbiome
+562	1119	1145	next generation sequencing	assay
+562	1179	1193	Butyricicoccus	bacteria
+562	1198	1210	Enterococcus	bacteria
+562	1216	1221	EC-12	bacteria
+562	1300	1331	neurotransmitter receptor genes	gene
+562	1339	1356	prefrontal cortex	anatomical location
+562	1384	1399	sodium butyrate	metabolite
+562	1469	1484	EC-12 mediated	bacteria
+562	1492	1513	anxiety-like behavior	disease
+562	1549	1554	brain	anatomical location
+562	1701	1718	heat-killed EC-12	bacteria
+562	1730	1739	probiotic	dietary supplement
+
+456|t|Gut microbiota in mental health and depression: role of pre/pro/synbiotics in their modulation.
+456|a|The microbiome residing in the human gut performs a wide range of biological functions. Recently, it has been elucidated that a change in dietary habits is associated with alteration in the gut microflora which results in increased health risks and vulnerability towards various diseases. Falling in line with the same concept, depression has also been shown to increase its prevalence around the globe, especially in the western world. Various research studies have suggested that changes in the gut microbiome profile further result in decreased tolerance of stress. Although currently available medications help in relieving the symptoms of depressive disorders briefly, these drugs are not able to completely reverse the multifactorial pathology of depression. The discovery of the communication pathway between gut microbes and the brain, i.e. the Gut-Brain Axis, has led to new areas of research to find more effective and safer alternatives to current antidepressants. The use of probiotics and prebiotics has been suggested as being effective in various preclinical studies and clinical trials for depression. Therefore, in the present review, we address the new antidepressant mechanisms via gut microbe alterations and provide insight into how these can provide an alternative to antidepressant therapy without the side effects and risk of adverse drug reactions.
+456	0	14	Gut microbiota	microbiome
+456	36	46	depression	disease
+456	56	74	pre/pro/synbiotics	dietary supplement
+456	100	110	microbiome	microbiome
+456	127	136	human gut	anatomical location
+456	286	300	gut microflora	microbiome
+456	375	383	diseases	disease
+456	424	434	depression	disease
+456	593	607	gut microbiome	microbiome
+456	657	663	stress	disease
+456	694	705	medications	intervention or procedure
+456	740	760	depressive disorders	disease
+456	776	781	drugs	drug
+456	849	859	depression	disease
+456	912	924	gut microbes	microbiome
+456	933	938	brain	anatomical location
+456	1055	1070	antidepressants	drug
+456	1083	1093	probiotics	dietary supplement
+456	1098	1108	prebiotics	dietary supplement
+456	1202	1212	depression	disease
+456	1297	1309	gut microbe	microbiome
+456	1386	1408	antidepressant therapy	intervention or procedure
+
+245|t|Gut-Brain Axis and Neurological Disorders-How microbiomes Affect our Mental Health.
+245|a|The gut microbiota is an essential part of the gastrointestinal tract and recent research, including clinical and preclinical studies, shed light on the interaction between the gut and the brain. A rising amount of evidence strongly proves the involvement of gut microbes in brain function and their contribution in altering behavior, mood, and ultimately in the pathogenesis of certain neurological conditions. The gut microbiota produces and modulates neurotransmitters such as GABA, serotonin, dopamine, glutamate, etc. Furthermore, there is a presence of a biological link between the microbiota, immune signaling, and CNS suggesting that microbial metabolites could regulate both neurological and immunological activities in the brain. Thus, this review focuses on the bidirectional communication between the gut and brain, its impact and role in the modulation of various neurological disorders, such as schizophrenia, depression, anxiety, etc., and attempts to explore the underlying mechanism for the same. The article also discusses studies involving germ-free mice, studies on the effects of faeces transfer of microbiota, and research involving gut microbiota composition in animal models. The effects of probiotics and prebiotics on neurological disorders are also discussed, along with the clinical studies for each of them. In a nutshell, extensive studies are required to explore this bidirectional communication between the gut and brain, which might help researchers develop new therapeutic targets in treating neurological disorders and increase our understanding of the gut-brain axis.
+245	19	41	Neurological Disorders	disease
+245	46	57	microbiomes	microbiome
+245	88	102	gut microbiota	microbiome
+245	131	153	gastrointestinal tract	anatomical location
+245	261	264	gut	anatomical location
+245	273	278	brain	anatomical location
+245	343	355	gut microbes	microbiome
+245	359	364	brain	anatomical location
+245	471	494	neurological conditions	disease
+245	500	514	gut microbiota	microbiome
+245	538	555	neurotransmitters	neurotransmitter
+245	564	568	GABA	neurotransmitter
+245	570	579	serotonin	neurotransmitter
+245	581	589	dopamine	neurotransmitter
+245	591	600	glutamate	neurotransmitter
+245	673	683	microbiota	microbiome
+245	707	710	CNS	anatomical location
+245	727	748	microbial metabolites	metabolite
+245	818	823	brain	anatomical location
+245	898	901	gut	anatomical location
+245	906	911	brain	anatomical location
+245	962	984	neurological disorders	disease
+245	994	1007	schizophrenia	disease
+245	1009	1019	depression	disease
+245	1021	1028	anxiety	disease
+245	1154	1158	mice	animal
+245	1205	1215	microbiota	microbiome
+245	1240	1254	gut microbiota	microbiome
+245	1300	1310	probiotics	dietary supplement
+245	1315	1325	prebiotics	dietary supplement
+245	1329	1351	neurological disorders	disease
+245	1524	1527	gut	anatomical location
+245	1532	1537	brain	anatomical location
+245	1612	1634	neurological disorders	disease
+
+672|t|Bifidobacterium in the gut microbiota confer resilience to chronic social defeat stress in mice.
+672|a|Accumulating evidence suggests that abnormalities in the composition of the gut microbiota may play a role in the pathogenesis of depression. Although approximately 30% mice are resilient to chronic social defeat stress (CSDS), the role of gut microbiota in this stress resilience is unknown. In this study, male C57BL/6 mice were exposed to a different CD1 aggressor mouse for 10 min on 10 consecutive days. A social interaction test was applied to distinguish between resilient and susceptible mice. Using 16S rRNA analysis, we examined the composition of gut microbiota in feces from control, resilient, and susceptible mice. The marked appearance of Bifidobacterium was detected in the resilient mice, whereas in the control and susceptible mice, Bifidobacterium were below the detection limit. Oral intake of Bifidobacterium significantly increased the number of resilient mice after CSDS compared with vehicle-treated mice. These findings suggest that Bifidobacterium may confer resilience to CSDS. Therefore, supplementation of Bifidobacterium may prevent the onset of depression from stress in humans. In addition, supplementation of Bifidobacterium may prevent or minimize relapse from remission induced by inflammation and/or stress in depressed patients.
+672	0	15	Bifidobacterium	bacteria
+672	23	37	gut microbiota	microbiome
+672	91	95	mice	animal
+672	173	187	gut microbiota	microbiome
+672	227	237	depression	disease
+672	266	270	mice	animal
+672	337	351	gut microbiota	microbiome
+672	405	422	male C57BL/6 mice	animal
+672	451	470	CD1 aggressor mouse	animal
+672	593	597	mice	animal
+672	605	622	16S rRNA analysis	assay
+672	655	669	gut microbiota	microbiome
+672	720	724	mice	animal
+672	751	766	Bifidobacterium	bacteria
+672	787	801	resilient mice	animal
+672	830	841	susceptible	animal
+672	842	846	mice	animal
+672	848	863	Bifidobacterium	bacteria
+672	911	926	Bifidobacterium	bacteria
+672	965	979	resilient mice	animal
+672	1005	1025	vehicle-treated mice	animal
+672	1055	1070	Bifidobacterium	bacteria
+672	1132	1147	Bifidobacterium	bacteria
+672	1173	1183	depression	disease
+672	1189	1195	stress	disease
+672	1199	1205	humans	human
+672	1239	1254	Bifidobacterium	bacteria
+672	1313	1325	inflammation	disease
+672	1333	1339	stress	disease
+
+113|t|The Gut-Brain Axis in Schizophrenia: The Implications of the Gut microbiome and SCFA Production.
+113|a|Schizophrenia, a severe mental illness affecting about 1% of the population, manifests during young adulthood, leading to abnormal mental function and behavior. Its multifactorial etiology involves genetic factors, experiences of adversity, infection, and gene-environment interactions. Emerging research indicates that maternal infection or stress during pregnancy may also increase schizophrenia risk in offspring. Recent research on the gut-brain axis highlights the gut microbiome's potential influence on central nervous system (CNS) function and mental health, including schizophrenia. The gut microbiota, located in the digestive system, has a significant role to play in human physiology, affecting immune system development, vitamin synthesis, and protection against pathogenic bacteria. Disruptions to the gut microbiota, caused by diet, medication use, environmental pollutants, and stress, may lead to imbalances with far-reaching effects on CNS function and mental health. Of interest are short-chain fatty acids (SCFAs), metabolic byproducts produced by gut microbes during fermentation. SCFAs can cross the blood-brain barrier, influencing CNS activity, including microglia and cytokine modulation. The dysregulation of neurotransmitters produced by gut microbes may contribute to CNS disorders, including schizophrenia. This review explores the potential relationship between SCFAs, the gut microbiome, and schizophrenia. Our aim is to deepen the understanding of the gut-brain axis in schizophrenia and to elucidate its implications for future research and therapeutic approaches.
+113	22	35	Schizophrenia	disease
+113	61	75	Gut microbiome	microbiome
+113	80	84	SCFA	metabolite
+113	97	110	Schizophrenia	disease
+113	121	135	mental illness	disease
+113	338	347	infection	disease
+113	426	435	infection	disease
+113	439	445	stress	disease
+113	481	494	schizophrenia	disease
+113	567	583	gut microbiome's	microbiome
+113	607	629	central nervous system	anatomical location
+113	631	634	CNS	anatomical location
+113	674	687	schizophrenia	disease
+113	693	707	gut microbiota	microbiome
+113	873	892	pathogenic bacteria	bacteria
+113	913	927	gut microbiota	microbiome
+113	991	997	stress	disease
+113	1051	1054	CNS	anatomical location
+113	1099	1130	short-chain fatty acids (SCFAs)	metabolite
+113	1165	1177	gut microbes	microbiome
+113	1199	1203	SCFA	metabolite
+113	1203	1204	s	animal
+113	1252	1255	CNS	anatomical location
+113	1332	1349	neurotransmitters	neurotransmitter
+113	1362	1374	gut microbes	microbiome
+113	1393	1406	CNS disorders	disease
+113	1418	1431	schizophrenia	disease
+113	1489	1494	SCFAs	metabolite
+113	1500	1514	gut microbiome	microbiome
+113	1520	1533	schizophrenia	disease
+113	1599	1612	schizophrenia	disease

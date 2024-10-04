@@ -45,7 +45,10 @@ class GLiNERInterface:
         self.labels = list(set(self.config['labels'].values())) # Ensure unique labels
         self.predictions = {}
         self.processing_approach = ''
-        self.overall_metrics = None
+        self.overall_metrics = {}
+
+        # Define if corpus has ground_truth
+        self.has_ground_truth = self.config['has_ground_truth']
 
 
     def setup_logging(self):
@@ -56,8 +59,9 @@ class GLiNERInterface:
         pipeline_output_path = 'pipeline.log'
 
         # Create the log file and, if already existing, make it empty
-        with open(pipeline_output_path, 'w+') as f:
-            f.write('')
+        with open(pipeline_output_path, 'a') as f:
+            f.write('-'*100)
+            f.write('\n\n')
 
         logging.basicConfig(level=logging.INFO,
                             format='%(asctime)s - %(levelname)s - %(message)s',
@@ -73,6 +77,7 @@ class GLiNERInterface:
         Initializes the GLiNER model, using GPU if available.
         """
         self.logger.info("Initializing GLiNER model...")
+        self.logger.info(f'model_name: {self.model_name}, threshold: {self.threshold}, processing: {self.processing}, flat_ner: {self.flat_ner}, multi_label: {self.multi_label}')
         device = 'cuda' if torch.cuda.is_available() else 'cpu'
         self.model = GLiNER.from_pretrained(self.model_name).to(device)
         self.device = device
@@ -98,9 +103,12 @@ class GLiNERInterface:
                     continue # Skip empty line
                 if '|t|' in line or '|w|' in line or '|j|' in line or '|y|' in line or '|a|' in line:
                     pmid, field, content = line.split('|', 2)
-                    if current_pmid != pmid:
+                    if current_pmid != pmid: # Create a new dictionary entry for each article
                         current_pmid = pmid
-                        articles[current_pmid] = {'title': '', 'author': '', 'journal': '', 'year': '', 'abstract': ''}   
+                        if self.has_ground_truth:
+                            articles[current_pmid] = {'title': '', 'author': '', 'journal': '', 'year': '', 'abstract': '', 'ground_truth': []}
+                        else:    
+                            articles[current_pmid] = {'title': '', 'author': '', 'journal': '', 'year': '', 'abstract': ''}   
                     if '|t|' in line:
                         articles[current_pmid]['title'] += content
                     elif '|w|' in line:
@@ -111,8 +119,56 @@ class GLiNERInterface:
                         articles[current_pmid]['year'] += content    
                     elif '|a|' in line:
                         articles[current_pmid]['abstract'] += content
-                
+                elif self.has_ground_truth:
+                    # If available, load ground truth
+                    parts = line.split('\t')
+                    # Ground truth structure:
+                    # {pmid}\t{start_index}\t{end_index}\t{text_span}\t{label} => len: 5
+                    if len(parts) == 5:
+                        pmid, start_idx, end_idx, text_span, label = parts
+                        if label in self.labels:
+                            annotation = {
+                                'start': int(start_idx),
+                                'end': int(end_idx),
+                                'text': text_span,
+                                'label': label
+                            }
+                            articles[pmid]['ground_truth'].append(annotation)
+                    """
+                    parts = line.split(' '|'\t')
+                    start_idx = parts[1]
+                    end_idx = parts[2]
+                    label = parts[-1]
+                    text = ''
+                    if parts[-2] == 'dietary' or parts[-2] == 'anatomical':
+                        label = f'{parts[-2]} {parts[-1]}'
+                        for i in range(3, len(parts)-2):
+                            text += f'{parts[i]} '
+                    else:
+                        for i in range(3, len(parts)-1):
+                            text += f'{parts[i]} '
+                    """
+                    
         self.articles = articles
+
+        if self.has_ground_truth:
+            print('-'*120)
+            for pmid in self.articles:
+                title = self.articles[pmid]['title']
+                print(f'{pmid}|t|{title}')
+                #abstract = self.articles[pmid]['abstract']
+                #print(f'{pmid}|a|{abstract}')
+                print(f'{pmid}|a|ABSTRACT')
+
+                for ann in self.articles[pmid]['ground_truth']:
+                    start_idx = ann['start']
+                    end_idx = ann['end']
+                    text = ann['text']
+                    label = ann['label']
+                    print(f'{pmid}\t{start_idx}\t{end_idx}\t{text}\t{label}')
+                
+                print('')
+            print('-'*120)
 
 
     def perform_ner(self):
@@ -211,7 +267,9 @@ class GLiNERInterface:
             separator = '. '
             sentences = abstract.split(separator)
             sentence_offsets = []
-            offset = len(title)
+            offset = len(title) + 1
+            if pmid == 562: # TODO: Remove that hardcoded shit and do something clever
+                offset += 1
             separator_length = len(separator)
             
             # Define the sentences offsets
@@ -306,7 +364,7 @@ class GLiNERInterface:
             separator = '. '
             sentences = abstract.split(separator)
             sentence_offsets = []
-            offset = len(title)
+            offset = len(title) + 1
             separator_length = len(separator)
             for sentence in sentences:
                 sentence_offsets.append(offset)
@@ -370,22 +428,54 @@ class GLiNERInterface:
                 total_predictions += 1
                 predictions_per_label[ann['label']] += 1
 
-
-        print(f'Num processed articles:\t {len(self.articles)}')
-        print(f'Num predicted entities:\t {total_predictions}')
-        print(f'Avg predicted entities per article:\t {round(len(self.articles)/total_predictions, 3)}')
+        # Store the results in self.overall_metrics
+        self.overall_metrics['num_articles'] = len(self.articles)
+        self.overall_metrics['num_predicted_entities'] = total_predictions
+        self.overall_metrics['avg_predicted_entities_per_article'] = round(total_predictions/len(self.articles), 3)
+        self.overall_metrics['predictions_per_label'] = {}
         for label in sorted(predictions_per_label, key=predictions_per_label.get):
-            print(f'Num of {label.upper()} entities predicted:\t {predictions_per_label[label]}')
+            self.overall_metrics['predictions_per_label'][label] = predictions_per_label[label]
 
-        self.logger.info(f'Num processed articles:\t {len(self.articles)}')
-        self.logger.info(f'Num predicted entities:\t {total_predictions}')
-        self.logger.info(f'Avg predicted entities per article:\t {round(len(self.articles)/total_predictions, 3)}')
-        for label in sorted(predictions_per_label, key=predictions_per_label.get):
-            self.logger.info(f'Num of {label.upper()} entities predicted:\t {predictions_per_label[label]}')
+        # If ground truth is available, compute prediction effectiveness metrics
+        if self.has_ground_truth:
+            # Define variable to hold all ground truth and predicted annotations 
+            gt_annotations = []
+            pred_annotations = []
+            gt_annotations_per_label = dict.fromkeys(self.labels, 0)
+            for pmid in self.articles:
+                gt_annotations.extend(self.articles[pmid]['ground_truth'])
+                pred_annotations.extend(self.predictions[pmid])
+                for ann in self.articles[pmid]['ground_truth']:
+                    gt_annotations_per_label[ann['label']] += 1
+            
+            self.overall_metrics['gt_annotations_per_label'] = {}
+            for label in sorted(predictions_per_label, key=predictions_per_label.get):
+                self.overall_metrics['gt_annotations_per_label'][label] = gt_annotations_per_label[label]
 
-        # Implement metric computation logic
-        # Store the result in self.overall_metrics
-        
+            # Parse the ground truth in a set variable
+            gt_set = set((ann['start'], ann['end'], ann['label']) for ann in gt_annotations)
+            
+            # Parse the predicted annotations in a set variable
+            pred_set = set((ann['start'], ann['end'], ann['label']) for ann in pred_annotations)
+
+            # Count ground truth and predicted entities
+            self.overall_metrics['num_gt_entities'] = len(gt_set)
+            self.overall_metrics['num_pred_entities'] = len(pred_set)
+
+            # Compute positives and negatives
+            self.overall_metrics['true_positives'] = len(gt_set & pred_set) 
+            self.overall_metrics['false_positives'] = len(pred_set - gt_set)
+            self.overall_metrics['false_negatives'] = len(gt_set - pred_set)
+
+            # Compute precision, recall, and F1-score
+            self.overall_metrics['precision'] = self.overall_metrics['true_positives'] / (self.overall_metrics['true_positives'] + self.overall_metrics['false_positives'] + 1e-10) # add 1e-10 to avoid division by zero
+            self.overall_metrics['recall'] = self.overall_metrics['true_positives'] / (self.overall_metrics['true_positives'] + self.overall_metrics['false_negatives'] + 1e-10)
+            self.overall_metrics['f1_score'] = 2 * self.overall_metrics['precision'] * self.overall_metrics['recall'] / (self.overall_metrics['precision'] + self.overall_metrics['recall'] + 1e-10)
+
+        # Print the results in output using the logger
+        for key in self.overall_metrics:
+            self.logger.info(f'{key}: {self.overall_metrics[key]}')        
+
 
     def write_predictions_pubtator(self):
         """
@@ -425,13 +515,186 @@ class GLiNERInterface:
                     score = ann['score']
 
                     # Write in PubTator format: PMID \t start_idx \t end_idx \t text_span \t label \t score
-                    # Here, CUI is replaced with the semantic type name
-                    pred_file.write(f"{pmid}\t{start}\t{end}\t{text}\t{text}\t{label}\t{score}\n")
+                    pred_file.write(f"{pmid}\t{start}\t{end}\t{text}\t{label}\t{score}\n")
 
                 pred_file.write("\n")  # Separate documents by a newline
 
-        print(f"\nAll predictions have been successfully written to {predictions_file_path}\n")
+        #print(f"\nAll predictions have been successfully written to {predictions_file_path}\n")
         self.logger.info(f"All predictions have been successfully written to {predictions_file_path}")
+
+
+    def write_predictions_pubtator_per_pmid(self):
+        """
+        Writes predictions for each article in a separated file in PubTator format named '<pmid>.txt'
+        """
+        # Iterate through the articles
+        for pmid in self.articles:
+            # Define output path
+            predictions_file_path = os.path.join(self.output_directory, f'{pmid}.txt')
+
+            with open(predictions_file_path, 'w', encoding='utf-8') as pred_file: # Create and open file for writing
+                title = self.articles[pmid]['title'] # Retrieve title
+                abstract = self.articles[pmid]['abstract'] # Retrieve abstract
+                pred_annotations = self.predictions.get(pmid, []) # using 'get' in place of '[]' cause no entities might be predicted for a certain article
+
+                # Write title and abstract
+                pred_file.write(f"{pmid}|t|{title}\n")
+                pred_file.write(f"{pmid}|a|{abstract}\n")
+
+                # Retrieve predicted annotations
+                for ann in pred_annotations:
+                    start = ann['start']
+                    end = ann['end']
+                    text = ann['text']
+                    label = ann['label']
+                    score = ann['score']
+
+                    # Write predicted annotations in PubTator format: PMID \t start_idx \t end_idx \t text_span \t label \t score
+                    pred_file.write(f"{pmid}\t{start}\t{end}\t{text}\t{label}\t{score}\n")
+
+        self.logger.info(f"Predictions for each article have been successfully written separated to {self.output_directory}")
+
+    def write_comparison_gt_predictions_pubtator(self):
+        """
+        Writes the comparison between ground truth and predicted annotations in a file in PubTator format
+        The caller to this function should check before if self.has_ground_truth is True
+        """
+        file_path = os.path.join(self.output_directory, 'gt_pred_comparison.txt')
+
+        def align_annotations(gt_annotations, pred_annotations):
+            """
+            Aligns ground truth and predicted annotations based on overlap
+
+            Parameters:
+            gt_annotations (list of tuples): the ground truth annotations for a certain article
+            pred_annotations (list of tuples): the predicted annotations for a certain article 
+
+            Returns:
+            list of tuples: a list of tuples (gt_ann, pred_ann)
+            """
+            aligned_pairs = []
+            matched_gt = set()
+            matched_pred = set()
+
+            def spans_overlap(start1, end1, start2, end2):
+                """
+                Checks if two text spans overlap
+                """
+                return max(start1, start2) < min(end1, end2)
+
+            # Find overlapping annotations
+            for i, gt_ann in enumerate(gt_annotations):
+                match_found = False
+                for j, pred_ann in enumerate(pred_annotations):
+                    if j in matched_pred:
+                        continue
+                    if spans_overlap(gt_ann['start'], gt_ann['end'], pred_ann['start'], pred_ann['end']):
+                        aligned_pairs.append((gt_ann, pred_ann))
+                        matched_gt.add(i)
+                        matched_pred.add(j)
+                        break
+
+            # Collect unmatched ground truth annotations 
+            unmatched_gt = [(gt_annotations[i], None) for i in range(len(gt_annotations)) if i not in matched_gt]
+
+            # Collect unmatched predicted annotations
+            unmatched_pred = [(None, pred_annotations[j]) for j in range(len(pred_annotations)) if j not in matched_pred]
+
+            # Combine all pairs 
+            all_pairs = aligned_pairs + unmatched_gt + unmatched_pred
+
+            # Sort all pairs based on the start index of the annotations
+            def get_start_index(pair):
+                starts = []
+                if pair[0]:
+                    starts.append(pair[0]['start'])
+                if pair[1]:
+                    starts.append(pair[1]['start'])
+                return min(starts) if starts else 0 # Should not happen
+
+            all_pairs.sort(key=get_start_index)
+
+            return all_pairs
+        
+        with open(file_path, 'w', encoding='utf-8') as f:
+            for pmid in self.articles:
+                title = self.articles[pmid]['title']
+                abstract = self.articles[pmid]['abstract']
+
+                gt_annotations = self.articles[pmid]['ground_truth']
+                pred_annotations = self.predictions[pmid]
+
+                aligned_tuples = align_annotations(gt_annotations, pred_annotations)
+
+                # Write title and abstract
+                f.write(f'{pmid}|t|{title}\n')
+                f.write(f'{pmid}|a|{abstract}\n')  
+
+                # Write annotations
+                for gt_ann, pred_ann in aligned_tuples:
+                    if gt_ann and pred_ann:
+                        # Scenario 1: Overlapping annotations
+                        # Ground truth annotation
+                        gt_line = "\t".join([
+                            "grtr",
+                            str(gt_ann['start']),
+                            str(gt_ann['end']),
+                            gt_ann['text'],
+                            gt_ann['label'],
+                        ])
+                        # Predicted annotation
+                        pred_line = "\t".join([
+                            "pred",
+                            str(pred_ann['start']),
+                            str(pred_ann['end']),
+                            pred_ann['text'],
+                            pred_ann['label'],
+                            str(pred_ann['score'])
+                        ])
+                    elif gt_ann and not pred_ann:
+                        # Scenario 2: Ground truth annotation not predicted
+                        gt_line = "\t".join([
+                            "grtr",
+                            str(gt_ann['start']),
+                            str(gt_ann['end']),
+                            gt_ann['text'],
+                            gt_ann['label'],
+                        ])
+                        pred_line = "\t".join([
+                            "pred",
+                            "——",
+                            "——",
+                            "——",
+                            "——",
+                            "——"
+                        ])
+                    elif not gt_ann and pred_ann:
+                        # Scenario 3: Predicted annotation not in ground truth
+                        gt_line = "\t".join([
+                            "grtr",
+                            "——",
+                            "——",
+                            "——",
+                            "——",
+                            "——"
+                        ])
+                        pred_line = "\t".join([
+                            "pred",
+                            str(pred_ann['start']),
+                            str(pred_ann['end']),
+                            pred_ann['text'],
+                            pred_ann['label'],
+                            str(pred_ann['score'])
+                        ])
+                    else:
+                        # Should not occur
+                        continue
+
+                    # Write the lines
+                    f.write(f"{gt_line}\n")
+                    f.write(f"{pred_line}\n\n") # Add an empty line between annotations
+
+                f.write('\n\n') # Add two empty lines when switching articles 
 
 
     def save_results(self):
@@ -441,31 +704,9 @@ class GLiNERInterface:
         
         self.logger.info("Saving results to files...")
         self.write_predictions_pubtator()
-        """
-        for pmid in self.articles:
-            title = self.articles[pmid]['title']
-            author = self.articles[pmid]['author']
-            journal = self.articles[pmid]['journal']
-            year = self.articles[pmid]['year']
-            abstract = self.articles[pmid]['abstract']
-
-            print(f'{pmid}|t|{title}')
-            print(f'{pmid}|w|{author}')
-            print(f'{pmid}|j|{journal}')
-            print(f'{pmid}|y|{year}')
-            print(f'{pmid}|a|{abstract}')
-
-            pred_annotations = self.predictions[pmid]
-            for ann in pred_annotations:
-                start = ann['start']
-                end = ann['end']
-                text_span = ann['text']
-                label = ann['label']
-                score = ann['score']
-
-                print(f'{start}\t{end}\t{text_span}\t{label}\t{score}')
-        """        
-        # Implement logic to save annotations per PMID
+        self.write_predictions_pubtator_per_pmid()
+        if self.has_ground_truth:
+            self.write_comparison_gt_predictions_pubtator()
 
 
     def run_pipeline(self):

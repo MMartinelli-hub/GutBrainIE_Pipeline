@@ -34,3 +34,8 @@ def load_config(config_path='config/config.yaml'):
     """
     with open(config_path, 'r') as file:
         return yaml.safe_load(file)
+    
+"""
+RegEx to match entire line having certain keywords
+^.*(word1|word2|word3).*\n?
+"""
