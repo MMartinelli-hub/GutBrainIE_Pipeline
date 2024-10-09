@@ -1,0 +1,30 @@
+# gliner_config.yaml
+model_name: "urchade/enrico-beta"
+threshold: 0.3
+one_by_one_prediction: True   # Whether to extract one relation type at a time
+
+#corpus_file_path: "retrieved_articles/vanessa_annotations.txt"
+corpus_file_path: "predicted_annotations/gliner_predictions.json"
+output_directory: "predicted_relations"
+load_from_json: True
+include_configuration_in_output: False
+
+has_ground_truth: False
+
+clef_relation_types: &clef_relation_types
+  R_001: "located in"
+  R_002: "part of"
+  R_003: "is linked to"
+  R_004: "contributes to"
+  R_005: "belongs to"
+  R_006: "produced by"
+  R_007: "influences"
+  R_008: "includes"
+  R_009: "changes expression"
+  R_010: "increases"
+  R_011: "has specified input"
+  R_012: "is influenced by"
+  R_013: "has anatomical location"
+  R_014: "has microbiome"
+  
+relation_types: *clef_relation_types

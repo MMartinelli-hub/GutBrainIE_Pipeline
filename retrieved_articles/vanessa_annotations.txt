@@ -17,7 +17,7 @@
 562	676	680	mice	animal
 562	711	716	EC-12	bacteria
 562	734	755	anxiety-like behavior	disease
-562	811	817	EC-12	bacteria
+562	811	816	EC-12	bacteria
 562	871	875	mice	animal
 562	925	956	neurotransmitter receptor genes	gene
 562	958	963	Adrb3	gene
@@ -25,7 +25,7 @@
 562	1006	1029	EC-12 supplemented mice	animal
 562	1054	1066	control mice	animal
 562	1071	1075	mice	animal
-562	1089	1104	gut microbiota	microbiome
+562	1089	1103	gut microbiota	microbiome
 562	1119	1145	next generation sequencing	assay
 562	1179	1193	Butyricicoccus	bacteria
 562	1198	1210	Enterococcus	bacteria
@@ -144,9 +144,8 @@
 113	426	435	infection	disease
 113	439	445	stress	disease
 113	481	494	schizophrenia	disease
-113	567	583	gut microbiome's	microbiome
-113	607	629	central nervous system	anatomical location
-113	631	634	CNS	anatomical location
+113	567	581	gut microbiome  microbiome
+113	607	635	central nervous system (CNS)    anatomical location
 113	674	687	schizophrenia	disease
 113	693	707	gut microbiota	microbiome
 113	873	892	pathogenic bacteria	bacteria
@@ -155,8 +154,7 @@
 113	1051	1054	CNS	anatomical location
 113	1099	1130	short-chain fatty acids (SCFAs)	metabolite
 113	1165	1177	gut microbes	microbiome
-113	1199	1203	SCFA	metabolite
-113	1203	1204	s	animal
+113	1199	1204	SCFAs	metabolite
 113	1252	1255	CNS	anatomical location
 113	1332	1349	neurotransmitters	neurotransmitter
 113	1362	1374	gut microbes	microbiome
