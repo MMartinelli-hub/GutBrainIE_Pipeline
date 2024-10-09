@@ -27,11 +27,11 @@ preprocess.preprocess_for_gliner(None)
 # Initialize GLiNER predictor for predicting entities (NER)
 gliner = gliner_interface.GLiNERInterface('config/gliner_config.yaml')
 
-# Initialize GraphER predictor for predicting relations (RE)
-grapher = grapher_interface.GraphERInterface('config/grapher_config.yaml')
-
 # Run GLiNER pipeline
 gliner.run_pipeline()
+
+# Initialize GraphER predictor for predicting relations (RE)
+grapher = grapher_interface.GraphERInterface('config/grapher_config.yaml')
 
 # Run GraphER pipeline
 grapher.run_pipeline()
