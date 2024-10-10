@@ -1,0 +1,64 @@
+31931033|t|Heat-killed Enterococcus fecalis (EC-12) supplement alters the expression of neurotransmitter receptor genes in the prefrontal cortex and alleviates anxiety-like behavior in mice.
+31931033|a|Gut microbiota plays a crucial role in the maintenance of mental health and influences mental disorders such as depression and anxiety. Several studies have reported the beneficial affects of probiotics in mental health. Heat-killed Enterococcus faecalis strain EC-12 (EC-12), a lactic acid bacterium induces activation of the immune system. However, little is known about the effect of EC-12 on mental health. In the present study, the anti-anxiety effect of EC-12 was elucidated in vivo. Male mice fed on diet supplemented with EC-12 showed decreased anxiety-like behavior in open-field and elevated plus-mazetest. In addition, EC-12 supplementation exhibited an anti-depressive trend in mice subjected to forced swim test. The expression of neurotransmitter receptor genes: Adrb3 and Avpr1a were significantly enhanced in EC-12 supplemented mice compared to that of the control mice. In mice, analyses of gut microbiota composition by next generation sequencing revealed significant increase in Butyricicoccus and Enterococcus with EC-12 supplementation. Significant difference was not detected in the expression of neurotransmitter receptor genes in the prefrontal cortex with the administration of sodium butyrate compared to that of the control group. The mechanism associated with EC-12 mediated reduced anxiety-like behavior and altered gene expression in the brain needs to be further elucidated. Taken together, the present study is the first to report the possibility of exploiting the anti-anxiety effect of heat-killed EC-12 as a novel probiotic to promote mental health.
+31931033	12	32	t	Enterococcus fecalis	bacteria	0.8997457027435303
+31931033	77	108	t	neurotransmitter receptor genes	gene	0.9323185682296753
+31931033	116	133	t	prefrontal cortex	anatomical location	0.982703447341919
+31931033	149	170	t	anxiety-like behavior	disease	0.2945922613143921
+31931033	174	178	t	mice	animal	0.9938389658927917
+31931033	180	194	a	Gut microbiota	microbiome	0.9722089767456055
+31931033	267	283	a	mental disorders	disease	0.38321933150291443
+31931033	292	302	a	depression	disease	0.743739902973175
+31931033	307	314	a	anxiety	disease	0.5545438528060913
+31931033	413	434	a	Enterococcus faecalis	bacteria	0.692928671836853
+31931033	442	447	a	EC-12	bacteria	0.24256815016269684
+31931033	449	454	a	EC-12	bacteria	0.3135368227958679
+31931033	459	480	a	lactic acid bacterium	bacteria	0.39645785093307495
+31931033	670	679	a	Male mice	animal	0.9719247817993164
+31931033	687	715	a	diet supplemented with EC-12	dietary supplement	0.6458703279495239
+31931033	758	768	a	open-field	assay	0.48279157280921936
+31931033	773	795	a	elevated plus-mazetest	assay	0.6336929202079773
+31931033	810	815	a	EC-12	dietary supplement	0.3593273162841797
+31931033	870	874	a	mice	animal	0.7922830581665039
+31931033	888	904	a	forced swim test	assay	0.8075822591781616
+31931033	924	955	a	neurotransmitter receptor genes	gene	0.4457458555698395
+31931033	957	962	a	Adrb3	gene	0.983121931552887
+31931033	967	973	a	Avpr1a	gene	0.9827207922935486
+31931033	1005	1010	a	EC-12	dietary supplement	0.3178071081638336
+31931033	1024	1028	a	mice	animal	0.8745765089988708
+31931033	1061	1065	a	mice	animal	0.8623854517936707
+31931033	1070	1074	a	mice	animal	0.8299683332443237
+31931033	1088	1102	a	gut microbiota	microbiome	0.9603474140167236
+31931033	1118	1144	a	next generation sequencing	assay	0.5833439826965332
+31931033	1178	1192	a	Butyricicoccus	bacteria	0.8783307075500488
+31931033	1197	1209	a	Enterococcus	bacteria	0.780069887638092
+31931033	1215	1220	a	EC-12	dietary supplement	0.3536577522754669
+31931033	1299	1330	a	neurotransmitter receptor genes	gene	0.3931901454925537
+31931033	1338	1355	a	prefrontal cortex	anatomical location	0.9593304395675659
+31931033	1383	1398	a	sodium butyrate	chemical	0.6083831191062927
+31931033	1712	1717	a	EC-12	bacteria	0.3049967885017395
+31931033	25	26	a	Gut microbiota	microbiome	39	40	a	mental disorders	disease	influences	0.345340013504028331931033	25	26	a	Gut microbiota	microbiome	39	45	a	mental disorders such as depression and anxiety	disease	influences	0.3083814978599548331931033	0	5	t	Heat-killed Enterococcus fecalis ( EC-12 )	bacteria	185	187	a	Butyricicoccus and Enterococcus	bacteria	increases	0.360795825719833431931033	0	5	t	Heat-killed Enterococcus fecalis ( EC-12 )	bacteria	11	13	t	neurotransmitter receptor genes	gene	changes expression	0.3410694301128387531931033	0	5	t	Heat-killed Enterococcus fecalis ( EC-12 )	bacteria	11	17	t	neurotransmitter receptor genes in the prefrontal cortex	gene	changes expression	0.55743300914764431931033	0	5	t	Heat-killed Enterococcus fecalis ( EC-12 )	bacteria	147	149	a	neurotransmitter receptor genes	gene	changes expression	0.39710894227027893
+33955443|t|Gut microbiota in mental health and depression: role of pre/pro/synbiotics in their modulation.
+33955443|a|The microbiome residing in the human gut performs a wide range of biological functions. Recently, it has been elucidated that a change in dietary habits is associated with alteration in the gut microflora which results in increased health risks and vulnerability towards various diseases. Falling in line with the same concept, depression has also been shown to increase its prevalence around the globe, especially in the western world. Various research studies have suggested that changes in the gut microbiome profile further result in decreased tolerance of stress. Although currently available medications help in relieving the symptoms of depressive disorders briefly, these drugs are not able to completely reverse the multifactorial pathology of depression. The discovery of the communication pathway between gut microbes and the brain, i.e. the Gut-Brain Axis, has led to new areas of research to find more effective and safer alternatives to current antidepressants. The use of probiotics and prebiotics has been suggested as being effective in various preclinical studies and clinical trials for depression. Therefore, in the present review, we address the new antidepressant mechanisms via gut microbe alterations and provide insight into how these can provide an alternative to antidepressant therapy without the side effects and risk of adverse drug reactions.
+33955443	0	14	t	Gut microbiota	microbiome	0.9778013825416565
+33955443	18	31	t	mental health	disease	0.40355098247528076
+33955443	36	46	t	depression	disease	0.44730982184410095
+33955443	56	74	t	pre/pro/synbiotics	chemical	0.43421560525894165
+33955443	100	110	a	microbiome	microbiome	0.29761803150177
+33955443	127	132	a	human	human	0.6495053172111511
+33955443	133	136	a	gut	anatomical location	0.3140780031681061
+33955443	224	248	a	change in dietary habits	intervention or procedure	0.29534977674484253
+33955443	286	300	a	gut microflora	microbiome	0.5474571585655212
+33955443	424	434	a	depression	disease	0.8723418712615967
+33955443	518	531	a	western world	anatomical location	0.30866438150405884
+33955443	593	607	a	gut microbiome	microbiome	0.6234142184257507
+33955443	674	705	a	currently available medications	drug	0.35979193449020386
+33955443	740	760	a	depressive disorders	disease	0.28877973556518555
+33955443	849	859	a	depression	disease	0.821775496006012
+33955443	912	924	a	gut microbes	bacteria	0.6108086109161377
+33955443	933	938	a	brain	anatomical location	0.26125621795654297
+33955443	949	963	a	Gut-Brain Axis	microbiome	0.6346936821937561
+33955443	1055	1070	a	antidepressants	drug	0.5790130496025085
+33955443	1083	1093	a	probiotics	dietary supplement	0.8843547701835632
+33955443	1098	1108	a	prebiotics	dietary supplement	0.9459731578826904
+33955443	1202	1212	a	depression	disease	0.8240382671356201
+33955443	0	1	t	Gut microbiota	microbiome	24	25	a	human gut	human	located in	0.846369445323944133955443	0	1	t	Gut microbiota	microbiome	24	25	a	human gut	human	has microbiome	0.610884845256805433955443	0	1	t	Gut microbiota	microbiome	58	59	t	health risks	unknown	increases	0.559617996215820333955443	0	1	t	Gut microbiota	microbiome	82	85	t	prevalence around the globe	unknown	increases	0.325742512941360533955443	0	1	t	Gut microbiota	microbiome	58	64	t	health risks and vulnerability towards various diseases	unknown	increases	0.39243948459625244

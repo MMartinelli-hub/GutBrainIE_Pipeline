@@ -1,0 +1,24 @@
+33955443|t|Gut microbiota in mental health and depression: role of pre/pro/synbiotics in their modulation.
+33955443|a|The microbiome residing in the human gut performs a wide range of biological functions. Recently, it has been elucidated that a change in dietary habits is associated with alteration in the gut microflora which results in increased health risks and vulnerability towards various diseases. Falling in line with the same concept, depression has also been shown to increase its prevalence around the globe, especially in the western world. Various research studies have suggested that changes in the gut microbiome profile further result in decreased tolerance of stress. Although currently available medications help in relieving the symptoms of depressive disorders briefly, these drugs are not able to completely reverse the multifactorial pathology of depression. The discovery of the communication pathway between gut microbes and the brain, i.e. the Gut-Brain Axis, has led to new areas of research to find more effective and safer alternatives to current antidepressants. The use of probiotics and prebiotics has been suggested as being effective in various preclinical studies and clinical trials for depression. Therefore, in the present review, we address the new antidepressant mechanisms via gut microbe alterations and provide insight into how these can provide an alternative to antidepressant therapy without the side effects and risk of adverse drug reactions.
+33955443	0	14	t	Gut microbiota	microbiome	0.9778013825416565
+33955443	18	31	t	mental health	disease	0.40355098247528076
+33955443	36	46	t	depression	disease	0.44730982184410095
+33955443	56	74	t	pre/pro/synbiotics	chemical	0.43421560525894165
+33955443	100	110	a	microbiome	microbiome	0.29761803150177
+33955443	127	132	a	human	human	0.6495053172111511
+33955443	133	136	a	gut	anatomical location	0.3140780031681061
+33955443	224	248	a	change in dietary habits	intervention or procedure	0.29534977674484253
+33955443	286	300	a	gut microflora	microbiome	0.5474571585655212
+33955443	424	434	a	depression	disease	0.8723418712615967
+33955443	518	531	a	western world	anatomical location	0.30866438150405884
+33955443	593	607	a	gut microbiome	microbiome	0.6234142184257507
+33955443	674	705	a	currently available medications	drug	0.35979193449020386
+33955443	740	760	a	depressive disorders	disease	0.28877973556518555
+33955443	849	859	a	depression	disease	0.821775496006012
+33955443	912	924	a	gut microbes	bacteria	0.6108086109161377
+33955443	933	938	a	brain	anatomical location	0.26125621795654297
+33955443	949	963	a	Gut-Brain Axis	microbiome	0.6346936821937561
+33955443	1055	1070	a	antidepressants	drug	0.5790130496025085
+33955443	1083	1093	a	probiotics	dietary supplement	0.8843547701835632
+33955443	1098	1108	a	prebiotics	dietary supplement	0.9459731578826904
+33955443	1202	1212	a	depression	disease	0.8240382671356201

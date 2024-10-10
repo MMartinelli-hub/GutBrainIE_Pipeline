@@ -1,0 +1,642 @@
+{
+    "31931033": {
+        "title": "Heat-killed Enterococcus fecalis (EC-12) supplement alters the expression of neurotransmitter receptor genes in the prefrontal cortex and alleviates anxiety-like behavior in mice.",
+        "author": "Jun Kambe; Sovijit Watcharin; Yuko Makioka-Itaya; Ryo Inoue; Gen Watanabe; Hirohito Yamaguchi; Kentaro Nagaoka",
+        "journal": "Neuroscience letters",
+        "year": "2020",
+        "abstract": "Gut microbiota plays a crucial role in the maintenance of mental health and influences mental disorders such as depression and anxiety. Several studies have reported the beneficial affects of probiotics in mental health. Heat-killed Enterococcus faecalis strain EC-12 (EC-12), a lactic acid bacterium induces activation of the immune system. However, little is known about the effect of EC-12 on mental health. In the present study, the anti-anxiety effect of EC-12 was elucidated in vivo. Male mice fed on diet supplemented with EC-12 showed decreased anxiety-like behavior in open-field and elevated plus-mazetest. In addition, EC-12 supplementation exhibited an anti-depressive trend in mice subjected to forced swim test. The expression of neurotransmitter receptor genes: Adrb3 and Avpr1a were significantly enhanced in EC-12 supplemented mice compared to that of the control mice. In mice, analyses of gut microbiota composition by next generation sequencing revealed significant increase in Butyricicoccus and Enterococcus with EC-12 supplementation. Significant difference was not detected in the expression of neurotransmitter receptor genes in the prefrontal cortex with the administration of sodium butyrate compared to that of the control group. The mechanism associated with EC-12 mediated reduced anxiety-like behavior and altered gene expression in the brain needs to be further elucidated. Taken together, the present study is the first to report the possibility of exploiting the anti-anxiety effect of heat-killed EC-12 as a novel probiotic to promote mental health.",
+        "pred_entities": [
+            {
+                "start_idx": 12,
+                "end_idx": 32,
+                "tag": "t",
+                "text_span": "Enterococcus fecalis",
+                "entity_label": "bacteria",
+                "score": 0.8997457027435303
+            },
+            {
+                "start_idx": 77,
+                "end_idx": 108,
+                "tag": "t",
+                "text_span": "neurotransmitter receptor genes",
+                "entity_label": "gene",
+                "score": 0.9323185682296753
+            },
+            {
+                "start_idx": 116,
+                "end_idx": 133,
+                "tag": "t",
+                "text_span": "prefrontal cortex",
+                "entity_label": "anatomical location",
+                "score": 0.982703447341919
+            },
+            {
+                "start_idx": 149,
+                "end_idx": 170,
+                "tag": "t",
+                "text_span": "anxiety-like behavior",
+                "entity_label": "disease",
+                "score": 0.2945922613143921
+            },
+            {
+                "start_idx": 174,
+                "end_idx": 178,
+                "tag": "t",
+                "text_span": "mice",
+                "entity_label": "animal",
+                "score": 0.9938389658927917
+            },
+            {
+                "start_idx": 180,
+                "end_idx": 194,
+                "tag": "a",
+                "text_span": "Gut microbiota",
+                "entity_label": "microbiome",
+                "score": 0.9722089767456055
+            },
+            {
+                "start_idx": 267,
+                "end_idx": 283,
+                "tag": "a",
+                "text_span": "mental disorders",
+                "entity_label": "disease",
+                "score": 0.38321933150291443
+            },
+            {
+                "start_idx": 292,
+                "end_idx": 302,
+                "tag": "a",
+                "text_span": "depression",
+                "entity_label": "disease",
+                "score": 0.743739902973175
+            },
+            {
+                "start_idx": 307,
+                "end_idx": 314,
+                "tag": "a",
+                "text_span": "anxiety",
+                "entity_label": "disease",
+                "score": 0.5545438528060913
+            },
+            {
+                "start_idx": 413,
+                "end_idx": 434,
+                "tag": "a",
+                "text_span": "Enterococcus faecalis",
+                "entity_label": "bacteria",
+                "score": 0.692928671836853
+            },
+            {
+                "start_idx": 442,
+                "end_idx": 447,
+                "tag": "a",
+                "text_span": "EC-12",
+                "entity_label": "bacteria",
+                "score": 0.24256815016269684
+            },
+            {
+                "start_idx": 449,
+                "end_idx": 454,
+                "tag": "a",
+                "text_span": "EC-12",
+                "entity_label": "bacteria",
+                "score": 0.3135368227958679
+            },
+            {
+                "start_idx": 459,
+                "end_idx": 480,
+                "tag": "a",
+                "text_span": "lactic acid bacterium",
+                "entity_label": "bacteria",
+                "score": 0.39645785093307495
+            },
+            {
+                "start_idx": 670,
+                "end_idx": 679,
+                "tag": "a",
+                "text_span": "Male mice",
+                "entity_label": "animal",
+                "score": 0.9719247817993164
+            },
+            {
+                "start_idx": 687,
+                "end_idx": 715,
+                "tag": "a",
+                "text_span": "diet supplemented with EC-12",
+                "entity_label": "dietary supplement",
+                "score": 0.6458703279495239
+            },
+            {
+                "start_idx": 758,
+                "end_idx": 768,
+                "tag": "a",
+                "text_span": "open-field",
+                "entity_label": "assay",
+                "score": 0.48279157280921936
+            },
+            {
+                "start_idx": 773,
+                "end_idx": 795,
+                "tag": "a",
+                "text_span": "elevated plus-mazetest",
+                "entity_label": "assay",
+                "score": 0.6336929202079773
+            },
+            {
+                "start_idx": 810,
+                "end_idx": 815,
+                "tag": "a",
+                "text_span": "EC-12",
+                "entity_label": "dietary supplement",
+                "score": 0.3593273162841797
+            },
+            {
+                "start_idx": 870,
+                "end_idx": 874,
+                "tag": "a",
+                "text_span": "mice",
+                "entity_label": "animal",
+                "score": 0.7922830581665039
+            },
+            {
+                "start_idx": 888,
+                "end_idx": 904,
+                "tag": "a",
+                "text_span": "forced swim test",
+                "entity_label": "assay",
+                "score": 0.8075822591781616
+            },
+            {
+                "start_idx": 924,
+                "end_idx": 955,
+                "tag": "a",
+                "text_span": "neurotransmitter receptor genes",
+                "entity_label": "gene",
+                "score": 0.4457458555698395
+            },
+            {
+                "start_idx": 957,
+                "end_idx": 962,
+                "tag": "a",
+                "text_span": "Adrb3",
+                "entity_label": "gene",
+                "score": 0.983121931552887
+            },
+            {
+                "start_idx": 967,
+                "end_idx": 973,
+                "tag": "a",
+                "text_span": "Avpr1a",
+                "entity_label": "gene",
+                "score": 0.9827207922935486
+            },
+            {
+                "start_idx": 1005,
+                "end_idx": 1010,
+                "tag": "a",
+                "text_span": "EC-12",
+                "entity_label": "dietary supplement",
+                "score": 0.3178071081638336
+            },
+            {
+                "start_idx": 1024,
+                "end_idx": 1028,
+                "tag": "a",
+                "text_span": "mice",
+                "entity_label": "animal",
+                "score": 0.8745765089988708
+            },
+            {
+                "start_idx": 1061,
+                "end_idx": 1065,
+                "tag": "a",
+                "text_span": "mice",
+                "entity_label": "animal",
+                "score": 0.8623854517936707
+            },
+            {
+                "start_idx": 1070,
+                "end_idx": 1074,
+                "tag": "a",
+                "text_span": "mice",
+                "entity_label": "animal",
+                "score": 0.8299683332443237
+            },
+            {
+                "start_idx": 1088,
+                "end_idx": 1102,
+                "tag": "a",
+                "text_span": "gut microbiota",
+                "entity_label": "microbiome",
+                "score": 0.9603474140167236
+            },
+            {
+                "start_idx": 1118,
+                "end_idx": 1144,
+                "tag": "a",
+                "text_span": "next generation sequencing",
+                "entity_label": "assay",
+                "score": 0.5833439826965332
+            },
+            {
+                "start_idx": 1178,
+                "end_idx": 1192,
+                "tag": "a",
+                "text_span": "Butyricicoccus",
+                "entity_label": "bacteria",
+                "score": 0.8783307075500488
+            },
+            {
+                "start_idx": 1197,
+                "end_idx": 1209,
+                "tag": "a",
+                "text_span": "Enterococcus",
+                "entity_label": "bacteria",
+                "score": 0.780069887638092
+            },
+            {
+                "start_idx": 1215,
+                "end_idx": 1220,
+                "tag": "a",
+                "text_span": "EC-12",
+                "entity_label": "dietary supplement",
+                "score": 0.3536577522754669
+            },
+            {
+                "start_idx": 1299,
+                "end_idx": 1330,
+                "tag": "a",
+                "text_span": "neurotransmitter receptor genes",
+                "entity_label": "gene",
+                "score": 0.3931901454925537
+            },
+            {
+                "start_idx": 1338,
+                "end_idx": 1355,
+                "tag": "a",
+                "text_span": "prefrontal cortex",
+                "entity_label": "anatomical location",
+                "score": 0.9593304395675659
+            },
+            {
+                "start_idx": 1383,
+                "end_idx": 1398,
+                "tag": "a",
+                "text_span": "sodium butyrate",
+                "entity_label": "chemical",
+                "score": 0.6083831191062927
+            },
+            {
+                "start_idx": 1712,
+                "end_idx": 1717,
+                "tag": "a",
+                "text_span": "EC-12",
+                "entity_label": "bacteria",
+                "score": 0.3049967885017395
+            }
+        ],
+        "pred_relations": [
+            {
+                "head_start_idx": 25,
+                "head_end_idx": 26,
+                "head_tag": "a",
+                "head_text_span": "Gut microbiota",
+                "head_entity_label": "microbiome",
+                "tail_start_idx": 39,
+                "tail_end_idx": 40,
+                "tail_tag": "a",
+                "tail_text_span": "mental disorders",
+                "tail_entity_label": "disease",
+                "relation_label": "influences",
+                "score": 0.3453400135040283
+            },
+            {
+                "head_start_idx": 25,
+                "head_end_idx": 26,
+                "head_tag": "a",
+                "head_text_span": "Gut microbiota",
+                "head_entity_label": "microbiome",
+                "tail_start_idx": 39,
+                "tail_end_idx": 45,
+                "tail_tag": "a",
+                "tail_text_span": "mental disorders such as depression and anxiety",
+                "tail_entity_label": "disease",
+                "relation_label": "influences",
+                "score": 0.30838149785995483
+            },
+            {
+                "head_start_idx": 0,
+                "head_end_idx": 5,
+                "head_tag": "t",
+                "head_text_span": "Heat-killed Enterococcus fecalis ( EC-12 )",
+                "head_entity_label": "bacteria",
+                "tail_start_idx": 185,
+                "tail_end_idx": 187,
+                "tail_tag": "a",
+                "tail_text_span": "Butyricicoccus and Enterococcus",
+                "tail_entity_label": "bacteria",
+                "relation_label": "increases",
+                "score": 0.3607958257198334
+            },
+            {
+                "head_start_idx": 0,
+                "head_end_idx": 5,
+                "head_tag": "t",
+                "head_text_span": "Heat-killed Enterococcus fecalis ( EC-12 )",
+                "head_entity_label": "bacteria",
+                "tail_start_idx": 11,
+                "tail_end_idx": 13,
+                "tail_tag": "t",
+                "tail_text_span": "neurotransmitter receptor genes",
+                "tail_entity_label": "gene",
+                "relation_label": "changes expression",
+                "score": 0.34106943011283875
+            },
+            {
+                "head_start_idx": 0,
+                "head_end_idx": 5,
+                "head_tag": "t",
+                "head_text_span": "Heat-killed Enterococcus fecalis ( EC-12 )",
+                "head_entity_label": "bacteria",
+                "tail_start_idx": 11,
+                "tail_end_idx": 17,
+                "tail_tag": "t",
+                "tail_text_span": "neurotransmitter receptor genes in the prefrontal cortex",
+                "tail_entity_label": "gene",
+                "relation_label": "changes expression",
+                "score": 0.557433009147644
+            },
+            {
+                "head_start_idx": 0,
+                "head_end_idx": 5,
+                "head_tag": "t",
+                "head_text_span": "Heat-killed Enterococcus fecalis ( EC-12 )",
+                "head_entity_label": "bacteria",
+                "tail_start_idx": 147,
+                "tail_end_idx": 149,
+                "tail_tag": "a",
+                "tail_text_span": "neurotransmitter receptor genes",
+                "tail_entity_label": "gene",
+                "relation_label": "changes expression",
+                "score": 0.39710894227027893
+            }
+        ]
+    },
+    "33955443": {
+        "title": "Gut microbiota in mental health and depression: role of pre/pro/synbiotics in their modulation.",
+        "author": "Hasnain N Methiwala; Bhupesh Vaidya; Vamsi Krishna Addanki; Mahendra Bishnoi; Shyam Sunder Sharma; Kanthi Kiran Kondepudi",
+        "journal": "Food & function",
+        "year": "2021",
+        "abstract": "The microbiome residing in the human gut performs a wide range of biological functions. Recently, it has been elucidated that a change in dietary habits is associated with alteration in the gut microflora which results in increased health risks and vulnerability towards various diseases. Falling in line with the same concept, depression has also been shown to increase its prevalence around the globe, especially in the western world. Various research studies have suggested that changes in the gut microbiome profile further result in decreased tolerance of stress. Although currently available medications help in relieving the symptoms of depressive disorders briefly, these drugs are not able to completely reverse the multifactorial pathology of depression. The discovery of the communication pathway between gut microbes and the brain, i.e. the Gut-Brain Axis, has led to new areas of research to find more effective and safer alternatives to current antidepressants. The use of probiotics and prebiotics has been suggested as being effective in various preclinical studies and clinical trials for depression. Therefore, in the present review, we address the new antidepressant mechanisms via gut microbe alterations and provide insight into how these can provide an alternative to antidepressant therapy without the side effects and risk of adverse drug reactions.",
+        "pred_entities": [
+            {
+                "start_idx": 0,
+                "end_idx": 14,
+                "tag": "t",
+                "text_span": "Gut microbiota",
+                "entity_label": "microbiome",
+                "score": 0.9778013825416565
+            },
+            {
+                "start_idx": 18,
+                "end_idx": 31,
+                "tag": "t",
+                "text_span": "mental health",
+                "entity_label": "disease",
+                "score": 0.40355098247528076
+            },
+            {
+                "start_idx": 36,
+                "end_idx": 46,
+                "tag": "t",
+                "text_span": "depression",
+                "entity_label": "disease",
+                "score": 0.44730982184410095
+            },
+            {
+                "start_idx": 56,
+                "end_idx": 74,
+                "tag": "t",
+                "text_span": "pre/pro/synbiotics",
+                "entity_label": "chemical",
+                "score": 0.43421560525894165
+            },
+            {
+                "start_idx": 100,
+                "end_idx": 110,
+                "tag": "a",
+                "text_span": "microbiome",
+                "entity_label": "microbiome",
+                "score": 0.29761803150177
+            },
+            {
+                "start_idx": 127,
+                "end_idx": 132,
+                "tag": "a",
+                "text_span": "human",
+                "entity_label": "human",
+                "score": 0.6495053172111511
+            },
+            {
+                "start_idx": 133,
+                "end_idx": 136,
+                "tag": "a",
+                "text_span": "gut",
+                "entity_label": "anatomical location",
+                "score": 0.3140780031681061
+            },
+            {
+                "start_idx": 224,
+                "end_idx": 248,
+                "tag": "a",
+                "text_span": "change in dietary habits",
+                "entity_label": "intervention or procedure",
+                "score": 0.29534977674484253
+            },
+            {
+                "start_idx": 286,
+                "end_idx": 300,
+                "tag": "a",
+                "text_span": "gut microflora",
+                "entity_label": "microbiome",
+                "score": 0.5474571585655212
+            },
+            {
+                "start_idx": 424,
+                "end_idx": 434,
+                "tag": "a",
+                "text_span": "depression",
+                "entity_label": "disease",
+                "score": 0.8723418712615967
+            },
+            {
+                "start_idx": 518,
+                "end_idx": 531,
+                "tag": "a",
+                "text_span": "western world",
+                "entity_label": "anatomical location",
+                "score": 0.30866438150405884
+            },
+            {
+                "start_idx": 593,
+                "end_idx": 607,
+                "tag": "a",
+                "text_span": "gut microbiome",
+                "entity_label": "microbiome",
+                "score": 0.6234142184257507
+            },
+            {
+                "start_idx": 674,
+                "end_idx": 705,
+                "tag": "a",
+                "text_span": "currently available medications",
+                "entity_label": "drug",
+                "score": 0.35979193449020386
+            },
+            {
+                "start_idx": 740,
+                "end_idx": 760,
+                "tag": "a",
+                "text_span": "depressive disorders",
+                "entity_label": "disease",
+                "score": 0.28877973556518555
+            },
+            {
+                "start_idx": 849,
+                "end_idx": 859,
+                "tag": "a",
+                "text_span": "depression",
+                "entity_label": "disease",
+                "score": 0.821775496006012
+            },
+            {
+                "start_idx": 912,
+                "end_idx": 924,
+                "tag": "a",
+                "text_span": "gut microbes",
+                "entity_label": "bacteria",
+                "score": 0.6108086109161377
+            },
+            {
+                "start_idx": 933,
+                "end_idx": 938,
+                "tag": "a",
+                "text_span": "brain",
+                "entity_label": "anatomical location",
+                "score": 0.26125621795654297
+            },
+            {
+                "start_idx": 949,
+                "end_idx": 963,
+                "tag": "a",
+                "text_span": "Gut-Brain Axis",
+                "entity_label": "microbiome",
+                "score": 0.6346936821937561
+            },
+            {
+                "start_idx": 1055,
+                "end_idx": 1070,
+                "tag": "a",
+                "text_span": "antidepressants",
+                "entity_label": "drug",
+                "score": 0.5790130496025085
+            },
+            {
+                "start_idx": 1083,
+                "end_idx": 1093,
+                "tag": "a",
+                "text_span": "probiotics",
+                "entity_label": "dietary supplement",
+                "score": 0.8843547701835632
+            },
+            {
+                "start_idx": 1098,
+                "end_idx": 1108,
+                "tag": "a",
+                "text_span": "prebiotics",
+                "entity_label": "dietary supplement",
+                "score": 0.9459731578826904
+            },
+            {
+                "start_idx": 1202,
+                "end_idx": 1212,
+                "tag": "a",
+                "text_span": "depression",
+                "entity_label": "disease",
+                "score": 0.8240382671356201
+            }
+        ],
+        "pred_relations": [
+            {
+                "head_start_idx": 0,
+                "head_end_idx": 1,
+                "head_tag": "t",
+                "head_text_span": "Gut microbiota",
+                "head_entity_label": "microbiome",
+                "tail_start_idx": 24,
+                "tail_end_idx": 25,
+                "tail_tag": "a",
+                "tail_text_span": "human gut",
+                "tail_entity_label": "human",
+                "relation_label": "located in",
+                "score": 0.8463694453239441
+            },
+            {
+                "head_start_idx": 0,
+                "head_end_idx": 1,
+                "head_tag": "t",
+                "head_text_span": "Gut microbiota",
+                "head_entity_label": "microbiome",
+                "tail_start_idx": 24,
+                "tail_end_idx": 25,
+                "tail_tag": "a",
+                "tail_text_span": "human gut",
+                "tail_entity_label": "human",
+                "relation_label": "has microbiome",
+                "score": 0.6108848452568054
+            },
+            {
+                "head_start_idx": 0,
+                "head_end_idx": 1,
+                "head_tag": "t",
+                "head_text_span": "Gut microbiota",
+                "head_entity_label": "microbiome",
+                "tail_start_idx": 58,
+                "tail_end_idx": 59,
+                "tail_tag": "t",
+                "tail_text_span": "health risks",
+                "tail_entity_label": "unknown",
+                "relation_label": "increases",
+                "score": 0.5596179962158203
+            },
+            {
+                "head_start_idx": 0,
+                "head_end_idx": 1,
+                "head_tag": "t",
+                "head_text_span": "Gut microbiota",
+                "head_entity_label": "microbiome",
+                "tail_start_idx": 82,
+                "tail_end_idx": 85,
+                "tail_tag": "t",
+                "tail_text_span": "prevalence around the globe",
+                "tail_entity_label": "unknown",
+                "relation_label": "increases",
+                "score": 0.3257425129413605
+            },
+            {
+                "head_start_idx": 0,
+                "head_end_idx": 1,
+                "head_tag": "t",
+                "head_text_span": "Gut microbiota",
+                "head_entity_label": "microbiome",
+                "tail_start_idx": 58,
+                "tail_end_idx": 64,
+                "tail_tag": "t",
+                "tail_text_span": "health risks and vulnerability towards various diseases",
+                "tail_entity_label": "unknown",
+                "relation_label": "increases",
+                "score": 0.39243948459625244
+            }
+        ]
+    }
+}
