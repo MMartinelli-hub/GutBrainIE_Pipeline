@@ -212,10 +212,10 @@ The PubTator format is a widely used format for storing biomedical text annotati
 
 For instance:
 ```
-1. 		33955443|t|Gut microbiota in mental health and depression: role of pre/pro/synbiotics in their modulation.
-2. 	 33955443|a|The microbiome residing in the human gut performs ...
-3. 	 33955443	0	14	t	Gut microbiota	microbiome	0.973515510559082
-4. 	 33955443	0	1	t	Gut microbiota	microbiome	24	25	a	human gut	anatomical location	has microbiome	0.601126968860626233955443	
+33955443|t|Gut microbiota in mental health and depression: role of pre/pro/synbiotics in their modulation.
+33955443|a|The microbiome residing in the human gut performs ...
+33955443	0	14	t	Gut microbiota	microbiome	0.973515510559082
+33955443	0	1	t	Gut microbiota	microbiome	24	25	a	human gut	anatomical location	has microbiome	0.601126968860626233955443	
 ```
 
 ### JSON Format
