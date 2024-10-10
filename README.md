@@ -206,15 +206,15 @@ The PubTator format is a widely used format for storing biomedical text annotati
 
 For instance:
 ```
-1. &emsp; 33955443|t|Gut microbiota in mental health and depression: role of pre/pro/synbiotics in their modulation.
-2. &emsp; 33955443|a|The microbiome residing in the human gut performs ...
-3. &emsp; 33955443 &emsp; 0 &emsp; 14	&emsp; t &emsp; Gut microbiota &emsp; microbiome &emsp; 0.973515510559082
-4. &emsp; 33955443 &emsp; 0 &emsp; 1 &emsp; t &emsp; Gut microbiota &emsp; microbiome &emsp; 24 &emsp; 25 &emsp; a &emsp; human gut &emsp; anatomical location &emsp; has microbiome &emsp; 0.601126968860626233955443	
+1. 		33955443|t|Gut microbiota in mental health and depression: role of pre/pro/synbiotics in their modulation.
+2. 	 33955443|a|The microbiome residing in the human gut performs ...
+3. 	 33955443	0	14	t	Gut microbiota	microbiome	0.973515510559082
+4. 	 33955443	0	1	t	Gut microbiota	microbiome	24	25	a	human gut	anatomical location	has microbiome	0.601126968860626233955443	
 ```
 
 ### JSON Format
 
-The annotations and relations are also stored in JSON format, providing a more structured representation that is easier to process programmatically. The JSON structure includes all the fields included in the PubTator format, and it is structured as follows:
+The annotations	and	relations are also stored in JSON format, providing a more structured representation that is easier to process programmatically. The JSON structure includes all the fields included in the PubTator format, and it is structured as follows:
 ```
 {
     "33955443": {
@@ -231,8 +231,8 @@ The annotations and relations are also stored in JSON format, providing a more s
                 "text_span": "Gut microbiota",
                 "entity_label": "microbiome",
                 "score": 0.973515510559082
-            }
-		]
+            }    
+		]    
 		"pred_relations": [
             {
                 "head_start_idx": 0,
@@ -247,9 +247,9 @@ The annotations and relations are also stored in JSON format, providing a more s
                 "tail_entity_label": "human",
                 "relation_type": "has microbiome",
                 "score": 0.6011269688606262
-            }
+            }    
 		]
-	}
+	}    
 }
 ```
 
