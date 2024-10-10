@@ -142,6 +142,19 @@ The configuration files located in the `config/` directory allow users to custom
 
 ## Examples
 
+### Entire Pipeline Example
+Here is an example use case for the entire pipeline, i.e., what is being done when launching `main.py`:
+1. **Retrieve Articles**: Runs `pubmed_retriever.py` to fetch PubMed articles listed in `pmid_list.csv` (depending on the input path defined in `config/config.yaml`). The retrieved articles are saved in `retrieved_articles/`, both in PubTator format, in a file named `retrieved_articles.txt`, and in CSV format, in a file named `retrieved_articles.csv`. 
+2. **Predict Annotations**: Use `gliner_interface.py` to run NER on the corpus specified in the `config/gliner_config.yaml` file and save results in `predicted_annotations/` (depending on the output path defined in the `config/gliner_config.yaml` file). The stored results include:
+    - A separate txt file for each processed document, named `<pmid>.txt`, in PubTator format
+    - A single txt file containing all the processed documents in PubTator format, named `predicted_entities.txt`
+    - A single JSON file containig all the processed documents, named `predicted_entities.json`
+3. **Extract Relations**: Use `grapher_interface.py` to predict relations between concepts on the corpus specified in the `config/grapher_config.yaml` and save the results in `predicted_relations/` (depending on the output path defined in the `config/grapher_config.yaml` file). If the loaded corpus contains the predictions for the entities, these will also be included in the stored results. The stored results include:
+    - A separate txt file for each processed document, named `<pmid>.txt`, in PubTator format
+    - A single txt file containing all the processed documents in PubTator format, named `predicted_relations.txt`
+    - A single JSON file containig all the processed documents, named `predicted_relations.json`
+
+### Individual Components Examples
 Here are a few example use cases:
 
 1. **Retrieve Articles**: Run `pubmed_retriever.py` to fetch PubMed articles listed in `pmid_list.csv`. The retrieved articles are saved in `retrieved_articles/`.
