@@ -4,7 +4,7 @@
 
 ## Project Description
 
-The **GutBrainIE Pipeline** is a comprehensive tool designed to facilitate the retrieval, processing, and analysis of scientific literature related to the gut-brain axis. It integrates multiple components, such as Data Retrieval from PubMed, Preprocessing, Named Entity Recognition (NER), Relation Extraction (RE), and Visualization, to provide insights into the interactions between the gut and brain. The main goal of this pipeline is to assist researchers in the biomedical field to extract meaningful knowledge from vast amounts of literature.
+The **GutBrainIE Pipeline** is a comprehensive tool designed to facilitate the retrieval, processing, and analysis of scientific literature related to the gut-brain axis. It integrates multiple components, such as Data Retrieval from PubMed, Preprocessing, Named Entity Recognition (NER), Relation Extraction (RE), and Visualization, to provide insights into the interactions between the gut and brain. The main goal of this pipeline is to assist researchers in the biomedical field to extract meaningful knowledge from vast amounts of literature by providing reliable distantly-supervised annotations for entities and relations in biomedical texts. 
 
 ## Table of Contents
 
@@ -12,14 +12,15 @@ The **GutBrainIE Pipeline** is a comprehensive tool designed to facilitate the r
 2. [Installation](#installation)
 3. [Usage](#usage)
 4. [Project Structure](#project-structure)
-5. [Examples](#examples)
-6. [Contributing](#contributing)
+5. [Configuration Parameters](#configuration-parameters)
+6. [Examples](#examples)
+<!--- 6. [Contributing](#contributing) ---->
 7. [License](#license)
 
 ## Features
 
 - **PubMed Retrieval**: Retrieve articles from PubMed using the `pubmed_retriever.py` script, based on predefined lists of PubMed IDs ([PMIDs](https://en.wikipedia.org/wiki/PubMed#PubMed_identifier)).
-- **Preprocessing and Postprocessing**: Clean and process text data to facilitate annotation and relation extraction.
+- **Preprocessing and Postprocessing**: Clean and process text data to facilitate NER and RE.
 - **Annotation and Relation Extraction**: Use [GLiNER](https://github.com/urchade/GLiNER) and [GraphER](https://github.com/urchade/GraphER) modules to predict relevant annotations and relations from the retrieved text.
 - **Configuration Management**: Configurable pipeline with YAML files for easy adjustments to different settings.
 - **Logging**: Comprehensive logging of the pipeline to track progresses and identify issues.
@@ -104,6 +105,41 @@ GutBrainIE_Pipeline/
 ├── pubmed_retriever.py            # Retrieves articles from PubMed
 └── utils.py                       # Utility functions
 ```
+
+## Configuration Parameters
+
+The configuration files located in the `config/` directory allow users to customize the pipeline's behavior. Below are the details of the parameters that can be set in each configuration file:
+
+### `config.yaml`
+- **email**: The email used for accessing PubMed data.
+- **pmid_list_path**: Path to the file where the list of PMIDs is located.
+- **store_retrieved_articles_path**: Path to the directory where the retrieved articles will be saved.
+
+### `gliner_config.yaml`
+- **model_name**: The name of the pretrained NER model to load (from [HuggingFace](https://huggingface.co/)).
+- **threshold**: The threshold value (float) to be used by the model when predicting entities. It indicates the minimum confidence level for a prediction to be kept.
+- **processing**: The processing type to be used by the model. It is possible to decide between:
+    > document: Process each document in a single batch.
+    > sentence: Process each document considering each sentence as a separated batch. A sentence is considered delimited by the dot ('.') symbol.
+    > label: Same as sentence, but predicts a single entity label at a time.
+- **flat_ner**: The boolean value defining whether to perform Flat NER, i.e., no overlapping entities.
+- **multi_label**: The boolean value defining whether to perform multi-label extraction, i.e., multiple labels for the same entity.
+- **corpus_file_path**: The path to the file (in PubTator format) containing the documents to be processed for NER.
+- **has_ground_truth**: The boolean value defining if the corpus contains also the ground truth (in PubTator format). If set to True, evaluation metrics (precision, recall, F1-score) will be computed, and a file comparing ground truth and predicted entities will be stored.
+- **output_directory**: The path to the directory where to store the predicted entities. It will be stored a separate file in PubTator format for each processed documents, named <pmid>.txt, and two files, one in PubTator format and one in JSON format, containing all the processed documents and predicted entities.
+- **include_configuration_in_output**: The boolean value defining whether to store the configuration parameters at the top of the output files.
+- **entity_labels**: The dictionary (i.e., pairs of key-value) defining the entity labels to be predicted by the model. The model will consider as entity labels the values populating the dictionary. The keys are not used.
+
+### `grapher_config.yaml`
+- **model_name**: The name of the pretrained RE model to load.
+- **threshold**: The threshold value (float) to be used by the model when predicting relations. It indicates the minimum confidence level for a prediction to be kept.
+- **one_by_one_prediction**: The boolean value defining whether to extract one relation type at a time.
+- **corpus_file_path**: The path to the file (in PubTator or JSON format) containing the documents to be processed for RE.
+- **load_from_json**: The boolean value defining if the corpus to be loaded is in JSON format.
+- **output_directory**: The path to the directory where to store the predicted relations. It will be stored a separate file in PubTator format for each processed documents, named <pmid>.txt, and two files, one in PubTator format and one in JSON format, containing all the processed documents and predicted relations. If the loaded corpus is the JSON produced in output by the NER module, the output will be comprehensive of both predicted entities and relations.
+- **include_configuration_in_output**: The boolean value defining whether to store the configuration parameters at the top of the output files.
+- **has_ground_truth**: The boolean value defining if the corpus contains also the ground truth (in PubTator format). If set to True, evaluation metrics (precision, recall, F1-score) will be computed, and a file comparing ground truth and predicted entities will be stored (NOT IMPLEMENTED FOR RE).
+- **relation_labels**: The dictionary (i.e., pairs of key-value) defining the relation labels to be predicted by the model. The model will consider as relation labels the values populating the dictionary. The keys are not used.
 
 ## Examples
 
