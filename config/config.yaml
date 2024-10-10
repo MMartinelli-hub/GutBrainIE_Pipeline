@@ -1,5 +1,8 @@
 # pubmed_retriever
 email: 'marco.martinelli.4@phd.unipd.it'
+ncbi_api_key: '1940dd707b0fc3c7ef3c79aa41d13d675a09'
+
 pmid_list_path: 'pmid_lists/pmid_list_short.csv'
 store_retrieved_articles_path: 'retrieved_articles'
+store_retrieved_articles_file_name: 'retrieved_articles'
 

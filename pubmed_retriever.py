@@ -12,7 +12,7 @@ import os
 
 
 class PubMedRetriever:
-    def __init__(self, email):
+    def __init__(self, email, ncbi_api_key):
         """
         Initialize the PubMedRetriever with the user's email.
 
@@ -20,7 +20,9 @@ class PubMedRetriever:
         email (str): User's email for NCBI API.
         """
         self.email = email
+        self.ncbi_api_key = ncbi_api_key
         Entrez.email = email # Set the email globally for Entrez
+        Entrez.api_key = ncbi_api_key # Set the NCBI api key globally for Entrez
 
 
     def fetch_abstract(self, pmid_list):

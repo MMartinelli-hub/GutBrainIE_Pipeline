@@ -4,14 +4,18 @@ threshold: 0.3
 one_by_one_prediction: True   # Whether to extract one relation type at a time
 
 #corpus_file_path: "retrieved_articles/vanessa_annotations.txt"
-corpus_file_path: "predicted_annotations/gliner_predictions.json"
+corpus_file_path: "predicted_entities/predicted_entities.json"
 output_directory: "predicted_relations"
 load_from_json: True
 include_configuration_in_output: False
 
+pubtator_aggregated_predictions_file_name: "predicted_relations.txt"
+json_aggregated_predictions_file_name: "predicted_relations.json"
+pubtator_comparison_ground_truth_predicted_file_name: "predicted_relations_ground_truth_comparison.txt"
+
 has_ground_truth: False
 
-clef_relation_types: &clef_relation_types
+clef_relation_labels: &clef_relation_types
   R_001: "located in"
   R_002: "part of"
   R_003: "is linked to"
@@ -27,4 +31,4 @@ clef_relation_types: &clef_relation_types
   R_013: "has anatomical location"
   R_014: "has microbiome"
   
-relation_types: *clef_relation_types
+relation_labels: *clef_relation_types

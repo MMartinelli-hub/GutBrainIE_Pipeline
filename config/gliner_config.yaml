@@ -7,12 +7,16 @@ multi_label: False     # Whether to perform multi-label extraction, i.e., multip
 
 #corpus_file_path: "retrieved_articles/vanessa_annotations.txt"
 corpus_file_path: "retrieved_articles/retrieved_articles.txt"
-output_directory: "predicted_annotations"
+output_directory: "predicted_entities"
 include_configuration_in_output: False
+
+pubtator_aggregated_predictions_file_name: "predicted_entities.txt"
+json_aggregated_predictions_file_name: "predicted_entities.json"
+pubtator_comparison_ground_truth_predicted_file_name: "predicted_entities_ground_truth_comparison.txt"
 
 has_ground_truth: False
 
-clef_labels: &clef_labels
+clef_entity_labels: &clef_labels
   OHMI_0000003: "microbiome"
   MESH_D004194: "disease"
   NCBITaxon_2: "bacteria"
@@ -47,4 +51,4 @@ medmentions_labels: &medmentions_labelspre
   T005: "Virus"
   T022: "Body System"
 
-labels: *clef_labels
+entity_labels: *clef_labels
