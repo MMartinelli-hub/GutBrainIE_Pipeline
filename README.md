@@ -22,7 +22,7 @@ The **GutBrainIE Pipeline** is a comprehensive tool designed to facilitate the r
 
 - **PubMed Retrieval**: Retrieve articles from PubMed using the `pubmed_retriever.py` script, based on predefined lists of PubMed IDs ([PMIDs](https://en.wikipedia.org/wiki/PubMed#PubMed_identifier)).
 - **Preprocessing and Postprocessing**: Clean and process text data to facilitate NER and RE.
-- **Annotation and Relation Extraction**: Use [GLiNER](https://github.com/urchade/GLiNER) and [GraphER](https://github.com/urchade/GraphER) modules to predict relevant annotations and relations from the retrieved text.
+- **Entity and Relation Extraction**: Use [GLiNER](https://github.com/urchade/GLiNER) and [GraphER](https://github.com/urchade/GraphER) modules to predict relevant entities and relations from the retrieved text.
 - **Configuration Management**: Configurable pipeline with YAML files for easy adjustments to different settings.
 - **Logging**: Comprehensive logging of the pipeline to track progresses and identify issues.
 
@@ -70,26 +70,24 @@ python main.py
   **Output**:
   - Files are saved in `retrieved_articles/`.
   - **retrieved_articles.csv**: Contains metadata and content of the retrieved articles.
-  - **retrieved_articles.txt**: Plain text versions of the retrieved articles, in customized PubTator format.
+  - **retrieved_articles.txt**: Plain text versions of the retrieved articles, in PubTator format.
 
-- **Gliner Interface**: Runs annotation predictions.
+- **Gliner Interface**: Runs Named Entity Recognition .
   ```sh
   python gliner_interface.py
   ```
   **Output**:
-  - Files are saved in `predicted_annotations/`.
-  - **gliner_predictions.json**: JSON file containing predicted annotations for each article.
-  - **<pmid>.txt**: Annotation results for individual articles, in customized PubTator format.
+  - Files are saved in `predicted_entities/`.
+  - **<pmid>_entities.txt**: NER results for individual articles, in customized PubTator format.
   - **predicted_entities.txt**: Single text file containing all processed documents in PubTator format.
-  - **predicted_entities.json**: JSON file containing all processed documents with annotations.
+  - **predicted_entities.json**: JSON file containing all processed documents with predicted entities.
 
-- **Grapher Interface**: Runs relation extraction.
+- **Grapher Interface**: Runs Relation Extraction.
   ```sh
   python grapher_interface.py
   ```
   **Output**:
   - Files are saved in `predicted_relations/`.
-  - **grapher_predictions.json**: JSON file containing predicted relations for each article.
   - **<pmid>.txt**: Relation extraction results for individual articles, in customized PubTator format.
   - **predicted_relations.txt**: Single text file containing all processed documents in PubTator format.
   - **predicted_relations.json**: JSON file containing all processed documents with extracted relations.
@@ -114,19 +112,19 @@ Note that running individual components is intended just for debugging and testi
 
 ```
 GutBrainIE_Pipeline/
-├── .git/                          # Git-related files (version control)
 ├── config/
 │   ├── config.yaml                # Config for PubMed Retriever component
 │   ├── gliner_config.yaml         # Config for Gliner component
 │   └── grapher_config.yaml        # Config for Grapher component
+├── EnriCO/						   # Folder containing the GraphER model
 ├── logs/
 │   ├── gliner_pipeline.log        # Log file for Gliner component
 │   └── grapher_pipeline.log       # Log file for Grapher component
 ├── pmid_lists/
 │   ├── pmid_list.csv              # Full list of PubMed IDs
 │   └── pmid_list_short.csv        # Short list of PubMed IDs 
-├── predicted_annotations/         # Output folder for Gliner predictions
-├── predicted_relations/           # Output folder for Grapher predictions
+├── predicted_entities/            # Output folder for GLiNER predictions (NER)
+├── predicted_relations/           # Output folder for GraphER predictions (RE)
 ├── retrieved_articles/            # Output folder for retrieved PubMed articles
 ├── main.py                        # Entry point for running the pipeline
 ├── gliner_interface.py            # Gliner module interface
@@ -143,8 +141,10 @@ The configuration files located in the `config/` directory allow users to custom
 
 ### `config.yaml`
 - **email**: Specifies the email address used for accessing PubMed resources.
+- **ncbi_api_key**: Specifies the API key to be used to query NCBI database.
 - **pmid_list_path**: Path to the file containing the list of PubMed IDs (PMIDs) that should be processed.
 - **store_retrieved_articles_path**: Path to the directory where the retrieved articles will be saved.
+- **store_retrieved_articles_file_name**: Name of the text and CSV files that will store the retrieved articles.
 
 ### `gliner_config.yaml`
 - **model_name**: The name of the pretrained Named Entity Recognition (NER) model to be loaded (from local or from [HuggingFace](https://huggingface.co/)).
@@ -156,9 +156,12 @@ The configuration files located in the `config/` directory allow users to custom
 - **flat_ner**: A boolean flag indicating whether to perform Flat NER, which prevents overlapping entities.
 - **multi_label**: A boolean flag indicating whether to allow multiple labels for the same entity.
 - **corpus_file_path**: Path to the input file (in PubTator format) containing documents to be used for NER.
-- **has_ground_truth**: A boolean flag specifying whether the corpus includes ground truth annotations. If set to `True`, evaluation metrics such as precision, recall, and F1-score will be computed, along with an output file comparing ground truth and predicted annotations.
+- **has_ground_truth**: A boolean flag specifying whether the corpus includes ground truth entities. If set to `True`, evaluation metrics such as precision, recall, and F1-score will be computed, along with an output file comparing ground truth and predicted entities.
 - **output_directory**: Path to the directory where predicted entities will be stored. Outputs include separate files for each document in PubTator format, as well as aggregated files in both PubTator and JSON formats.
 - **include_configuration_in_output**: A boolean flag specifying whether to include the configuration parameters at the top of the output file containing the aggregated predictions in PubTator format.
+- **pubtator_aggregated_predictions_file_name**: Name of the text file in PubTator format that will store the aggregation of the articles and predicted entities.
+- **json_aggregated_predictions_file_name**: Name of the JSON file that will store the aggregation of the articles and predicted entities.
+- **pubtator_comparison_ground_truth_predicted_file_name**: Name of the text file in PubTator format that will store the comparison of the ground truth and predicted entities.
 - **entity_labels**: A dictionary specifying the entity labels to be predicted by the model. The values are the entity labels considered by the model, while the keys are not used in the current implementation.
 
 ### `grapher_config.yaml`
@@ -169,7 +172,10 @@ The configuration files located in the `config/` directory allow users to custom
 - **load_from_json**: A boolean flag specifying whether the input corpus is in JSON format.
 - **output_directory**: Path to the directory where predicted relations will be stored. Outputs include separate files for each document in PubTator format, as well as aggregated files in both PubTator and JSON formats. If the loaded corpus contains NER predictions, the output will also include those entity predictions.
 - **include_configuration_in_output**: A boolean flag specifying whether to include the configuration parameters at the top of the output files.
-- **has_ground_truth**: A boolean flag specifying whether the corpus includes ground truth annotations. If set to `True`, evaluation metrics such as precision, recall, and F1-score will be computed (note: not implemented for RE).
+- **pubtator_aggregated_predictions_file_name**: Name of the text file in PubTator format that will store the aggregation of the articles and predicted relations.
+- **json_aggregated_predictions_file_name**: Name of the JSON file that will store the aggregation of the articles and predicted relations.
+- **pubtator_comparison_ground_truth_predicted_file_name**: Name of the text file in PubTator format that will store the comparison of the ground truth and predicted relations.
+- **has_ground_truth**: A boolean flag specifying whether the corpus includes ground truth relations. If set to `True`, evaluation metrics such as precision, recall, and F1-score will be computed (note: not implemented for RE).
 - **relation_labels**: A dictionary specifying the relation labels to be predicted by the model. The values are the relation labels considered by the model, while the keys are not used in the current implementation.
 
 ## Output Structure
@@ -178,7 +184,7 @@ The outputs produced by the GutBrainIE Pipeline are stored in different formats 
 
 ### PubTator Format
 
-The PubTator format is a widely used format for storing biomedical text annotations, providing both raw text and labeled entities. In the GutBrainIE Pipeline, the PubTator format has been customized to include entity annotations and relations, allowing for an integrated representation of extracted knowledge. The customized structure includes:
+The PubTator format is a widely used format for storing biomedical text annotations, providing both raw text and labeled entities. In the GutBrainIE Pipeline, the PubTator format has been customized to include entity and relation predictions, allowing for an integrated representation of extracted knowledge. The customized structure includes:
 
 - **Document ID**: The PubMed ID (PMID) of the document.
 - **Title**: The title of the document.
@@ -214,7 +220,7 @@ For instance:
 
 ### JSON Format
 
-The annotations	and	relations are also stored in JSON format, providing a more structured representation that is easier to process programmatically. The JSON structure includes all the fields included in the PubTator format, and it is structured as follows:
+The predicted entities and relations are also stored in JSON format, providing a more structured representation that is easier to process programmatically. The JSON structure includes all the fields included in the PubTator format, and it is structured as follows:
 ```
 {
     "33955443": {
@@ -253,39 +259,26 @@ The annotations	and	relations are also stored in JSON format, providing a more s
 }
 ```
 
-
-- **Document ID**: The PubMed ID (PMID) of the document.
-- **Text**: The raw text of the document.
-- **Annotations**: A list of entities, each represented as an object with the following fields:
-  - **start**: The starting character index of the entity in the text.
-  - **end**: The ending character index of the entity in the text.
-  - **type**: The type of the entity (e.g., Chemical, Disease).
-  - **text**: The actual text of the entity.
-- **Relations**: A list of relations, each represented as an object with the following fields:
-  - **type**: The type of the relation (e.g., interacts_with).
-  - **entities**: A list of entity IDs involved in the relation.
-
-
 ## Examples
 
 ### Entire Pipeline Example
 Here is an example use case for the entire pipeline, i.e., what is being done when launching `main.py`:
 1. **Retrieve Articles**: Runs `pubmed_retriever.py` to fetch PubMed articles listed in `pmid_list.csv` (depending on the input path defined in `config/config.yaml`). The retrieved articles are saved in `retrieved_articles/`, both in PubTator format, in a file named `retrieved_articles.txt`, and in CSV format, in a file named `retrieved_articles.csv`. 
-2. **Predict Annotations**: Use `gliner_interface.py` to run NER on the corpus specified in the `config/gliner_config.yaml` file and save results in `predicted_annotations/` (depending on the output path defined in the `config/gliner_config.yaml` file). The stored results include:
-    - A separate txt file for each processed document, named `<pmid>.txt`, in PubTator format
-    - A single txt file containing all the processed documents in PubTator format, named `predicted_entities.txt`
+2. **Predict Entities**: Use `gliner_interface.py` to run NER on the corpus specified in the `config/gliner_config.yaml` file and save results in `predicted_entities/` (depending on the output path defined in the `config/gliner_config.yaml` file). The stored results include:
+    - A separate text file for each processed document, named `<pmid>.txt`, in PubTator format
+    - A single text file containing all the processed documents in PubTator format, named `predicted_entities.txt`
     - A single JSON file containig all the processed documents, named `predicted_entities.json`
-3. **Extract Relations**: Use `grapher_interface.py` to predict relations between concepts on the corpus specified in the `config/grapher_config.yaml` and save the results in `predicted_relations/` (depending on the output path defined in the `config/grapher_config.yaml` file). If the loaded corpus contains the predictions for the entities, these will also be included in the stored results. The stored results include:
-    - A separate txt file for each processed document, named `<pmid>.txt`, in PubTator format
-    - A single txt file containing all the processed documents in PubTator format, named `predicted_relations.txt`
+3. **Predict Relations**: Use `grapher_interface.py` to run RE on the corpus specified in the `config/grapher_config.yaml`, predict relations between concepts, and save the results in `predicted_relations/` (depending on the output path defined in the `config/grapher_config.yaml` file). If the loaded corpus contains the predictions for the entities, these will also be included in the stored results. The stored results include:
+    - A separate text file for each processed document, named `<pmid>.txt`, in PubTator format
+    - A single text file containing all the processed documents in PubTator format, named `predicted_relations.txt`
     - A single JSON file containig all the processed documents, named `predicted_relations.json`
 
 ### Individual Components Examples
 Here are a few example use cases:
 
 1. **Retrieve Articles**: Run `pubmed_retriever.py` to fetch PubMed articles listed in `pmid_list.csv`. The retrieved articles are saved in `retrieved_articles/`.
-2. **Predict Annotations**: Use `gliner_interface.py` to run annotation predictions and save results in `predicted_annotations/`.
-3. **Extract Relations**: Use `grapher_interface.py` to predict relations between concepts and save the results in `predicted_relations/`.
+2. **Predict Entities**: Use `gliner_interface.py` to run entity predictions and save results in `predicted_entities/`.
+3. **Extract Relations**: Use `grapher_interface.py` to run relation predictions between concepts and save the results in `predicted_relations/`.
 
 <!--- ## Contributing
 
