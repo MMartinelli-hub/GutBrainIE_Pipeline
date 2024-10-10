@@ -14,7 +14,6 @@ The **GutBrainIE Pipeline** is a comprehensive tool designed to facilitate the r
 4. [Project Structure](#project-structure)
 5. [Configuration Parameters](#configuration-parameters)
 6. [Examples](#examples)
-<!--- 6. [Contributing](#contributing) ---->
 7. [License](#license)
 
 ## Features
@@ -119,9 +118,9 @@ The configuration files located in the `config/` directory allow users to custom
 - **model_name**: The name of the pretrained NER model to load (from [HuggingFace](https://huggingface.co/)).
 - **threshold**: The threshold value (float) to be used by the model when predicting entities. It indicates the minimum confidence level for a prediction to be kept.
 - **processing**: The processing type to be used by the model. It is possible to decide between:
-    > document: Process each document in a single batch.
-    > sentence: Process each document considering each sentence as a separated batch. A sentence is considered delimited by the dot ('.') symbol.
-    > label: Same as sentence, but predicts a single entity label at a time.
+    - document: Process each document in a single batch.
+    - sentence: Process each document considering each sentence as a separated batch. A sentence is considered delimited by the dot ('.') symbol.
+    - label: Same as sentence, but predicts a single entity label at a time.
 - **flat_ner**: The boolean value defining whether to perform Flat NER, i.e., no overlapping entities.
 - **multi_label**: The boolean value defining whether to perform multi-label extraction, i.e., multiple labels for the same entity.
 - **corpus_file_path**: The path to the file (in PubTator format) containing the documents to be processed for NER.
@@ -155,5 +154,5 @@ Contributions are welcome! Please fork the repository, create a feature branch, 
 
 ## License
 
-This project is licensed under the Apache 2.0 License. 
+This project is licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.txt). 
 <!--- See the `LICENSE` file for details. --->
