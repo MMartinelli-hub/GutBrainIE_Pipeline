@@ -45,6 +45,7 @@ class GLiNERInterface:
         # Initialize other variables
         self.articles = {}
         self.entity_labels = list(set(self.config['entity_labels'].values())) # Ensure unique labels
+        self.entity_labels = [l.lower() for l in self.entity_labels] # Make labels lower-cased (needed for NuZero)
         self.processing_approach = ''
         self.overall_metrics = {}
 
@@ -155,7 +156,7 @@ class GLiNERInterface:
         """
         Performs NER on the documents using GLiNER.
         """
-        self.logger.info("Performing NER on documents with GLiNER...")
+        self.logger.info(f"Performing NER on documents with GLiNER using {self.model_name} as model...")
         # Choose the processing approach based on configuration
         if self.processing == 'sentence':
             self.process_documents_sentence_level()
@@ -190,6 +191,27 @@ class GLiNERInterface:
             # Predict entities 
             title_entities = self.model.predict_entities(title, self.entity_labels, threshold=threshold, flat_ner=flat_ner, multi_label=multi_label)
             abstract_entities = self.model.predict_entities(abstract, self.entity_labels, threshold=threshold, flat_ner=flat_ner, multi_label=multi_label)
+
+            if(self.model_name == "numind/NuNerZero"):
+                # If the model is NuNerZero, perform entities merging
+                def merge_entities(text, entities):
+                    if not entities:
+                        return []
+                    merged = []
+                    current = entities[0]
+                    for next_entity in entities[1:]:
+                        if next_entity['label'] == current['label'] and (next_entity['start'] == current['end'] + 1 or next_entity['start'] == current['end']):
+                            current['text'] = text[current['start']: next_entity['end']].strip()
+                            current['end'] = next_entity['end']
+                        else:
+                            merged.append(current)
+                            current = next_entity
+                    # Append the last entity
+                    merged.append(current)
+                    return merged
+                
+                title_entities = merge_entities(title, title_entities)
+                abstract_entities = merge_entities(abstract, abstract_entities)
 
             # Adjust indices for predicted entities in the abstract
             for entity in abstract_entities:

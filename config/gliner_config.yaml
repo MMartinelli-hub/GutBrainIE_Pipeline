@@ -1,12 +1,13 @@
 # gliner_config.yaml
-model_name: "urchade/gliner_large_bio-v0.1"
+#model_name: "urchade/gliner_large_bio-v0.1"
+model_name: "numind/NuNerZero"
 threshold: 0.2
 processing: "document"  # options: document, sentence, label
 flat_ner: True         # Whether to perform Flat NER, i.e., no overlapping entities
 multi_label: False     # Whether to perform multi-label extraction, i.e., multiple labels for the same entity
 
-#corpus_file_path: "retrieved_articles/vanessa_annotations.txt"
-corpus_file_path: "retrieved_articles/retrieved_articles.txt"
+corpus_file_path: "retrieved_articles/vanessa_annotations.txt"
+#corpus_file_path: "retrieved_articles/retrieved_articles.txt"
 output_directory: "predicted_entities"
 include_configuration_in_output: False
 
@@ -14,7 +15,7 @@ pubtator_aggregated_predictions_file_name: "predicted_entities.txt"
 json_aggregated_predictions_file_name: "predicted_entities.json"
 pubtator_comparison_ground_truth_predicted_file_name: "predicted_entities_ground_truth_comparison.txt"
 
-has_ground_truth: False
+has_ground_truth: True
 
 clef_entity_labels: &clef_labels
   OHMI_0000003: "microbiome"
