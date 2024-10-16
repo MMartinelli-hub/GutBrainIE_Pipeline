@@ -271,7 +271,7 @@ class GraphERInterface:
                 else:
                     # No matching entity found, assign label to 'unknown' and manually compute the tag
                     tail_entity_label = 'unknown'
-                    tail_tag = 't' if head_char_end < len(title) else 'a'
+                    tail_tag = 't' if tail_char_end < len(title) else 'a'
 
                 relation['head_start_idx'] = s_h
                 relation['head_end_idx'] = e_h
