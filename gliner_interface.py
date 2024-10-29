@@ -1,6 +1,8 @@
 # gliner_interface.py
 
 import os
+#os.environ["TOKENIZERS_PARALLELISM"] = "true"
+
 import argparse
 import logging
 import numpy as np
@@ -90,6 +92,13 @@ class GLiNERInterface:
         
         # Use GPU if available
         device = 'cuda' if torch.cuda.is_available() else 'cpu'
+
+        """
+        print(f'>>> torch.cuda.is_available(): {torch.cuda.is_available()}')
+        print(f'>>> torch.cuda.current_device(): {torch.cuda.current_device()}')                                                                   
+        device = torch.device(f'cuda:{torch.cuda.current_device()}') if torch.cuda.is_available() else torch.device('cpu')
+        print(f'Initialized device: {device}...')
+        """
         
         # Load the pretrained model for GLiNER
         self.model = GLiNER.from_pretrained(self.model_name).to(device)

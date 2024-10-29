@@ -1,8 +1,10 @@
 from EnriCo.model import EnriCo
 
+import os
+#os.environ["TOKENIZERS_PARALLELISM"] = "true"
+
 import torch
 import re
-import os
 import logging
 import utils
 import json
@@ -84,6 +86,13 @@ class GraphERInterface:
 
         # Use GPU if available
         device = 'cuda' if torch.cuda.is_available() else 'cpu'
+
+        """
+        print(f'>>> torch.cuda.is_available(): {torch.cuda.is_available()}')
+        print(f'>>> torch.cuda.current_device(): {torch.cuda.current_device()}')                                                                   
+        device = torch.device(f'cuda:{torch.cuda.current_device()}') if torch.cuda.is_available() else torch.device('cpu')
+        print(f'Initialized device: {device}...')
+        """
 
         # Load the pretrained model for GraphER
         self.model = EnriCo.from_pretrained(self.model_name).to(device)
