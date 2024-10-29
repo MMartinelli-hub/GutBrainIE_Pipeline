@@ -340,7 +340,7 @@ class GraphERInterface:
                     score = relation['score']
 
                     # Write in PubTator format: PMID \t head_start_idx \t head_end_idx \t head_tag \t head_text_span \t head_entity_label \t tail_start_idx \t tail_end_idx \t tail_tag \t tail_text_span \t tail_entity_label \t relation_label \t score
-                    pred_file.write(f'{pmid}\t{head_start_idx}\t{head_end_idx}\t{head_tag}\t{head_text_span}\t{head_entity_label}\t{tail_start_idx}\t{tail_end_idx}\t{tail_tag}\t{tail_text_span}\t{tail_entity_label}\t{relation_label}\t{score}')
+                    pred_file.write(f'{pmid}\t{head_start_idx}\t{head_end_idx}\t{head_tag}\t{head_text_span}\t{head_entity_label}\t{tail_start_idx}\t{tail_end_idx}\t{tail_tag}\t{tail_text_span}\t{tail_entity_label}\t{relation_label}\t{score}\n')
 
                 pred_file.write("\n")  # Separate documents by a newline
 
