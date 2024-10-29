@@ -1,5 +1,8 @@
 # gliner_config.yaml
 #model_name: "urchade/gliner_large_bio-v0.1"
+#model_name: "urchade/gliner_large_bio-v0.2"
+#model_name: "kzuri/gliner-bio-finetuned"
+#model_name: "knowledgator/gliner-bi-large-v1.0"
 model_name: "numind/NuNerZero"
 threshold: 0.2
 processing: "document"  # options: document, sentence, label
@@ -31,9 +34,9 @@ clef_entity_labels: &clef_labels
   NCBITaxon_9606: "human"
   NCIT_C14182: "animal"
   OBI_0000070: "assay"
-  WHYISHERE: "intervention or procedure"
-
+  
 biored_labels: &biored_labels
+  NCIT_C25218: "intervention or procedure"
   T003: "Phenotypic Feature"
   T004: "Chemical"
   T005: "Chemical Entity"

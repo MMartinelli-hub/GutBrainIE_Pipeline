@@ -24,11 +24,12 @@ clef_relation_labels: &clef_relation_types
   R_006: "produced by"
   R_007: "influences"
   R_008: "includes"
-  R_009: "changes expression"
-  R_010: "increases"
+  R_009: "change expression"
+  R_010: "increase"
   R_011: "has specified input"
   R_012: "is influenced by"
   R_013: "has anatomical location"
   R_014: "has microbiome"
+  R_015: "change abundance"
   
 relation_labels: *clef_relation_types
