@@ -12,3 +12,4 @@ __pycache__/
 retrieved_articles/retrieved_articles.csv
 retrieved_articles/retrieved_articles.txt
 .DS_Store
+config/config.yaml
