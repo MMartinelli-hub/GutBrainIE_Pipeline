@@ -1,6 +1,74 @@
 # HEREDITARY Literature
 
 ## Folder Structure
+
+The **HereditaryLiterature** folder is organized as follows:
+```
+HereditaryLiterature
+│   mental_health_new.zip
+│   mental_health_old.zip
+│   parkinson_new.zip
+│   parkinson_old.zip
+│   process_csv.ipynb
+│   README.md
+│   retrieve_literature.py
+│
+├───merged_literature
+│       hereditary_new_not_in_old.csv
+│       hereditary_old_new_merged.csv
+│       hereditary_old_new_merged_no_duplicates.csv
+│       mental_health_new_not_in_old.csv
+│       mental_health_old_new_merged.csv
+│       mental_health_old_new_merged_no_duplicates.csv
+│       parkinson_new_not_in_old.csv
+│       parkinson_old_new_merged.csv
+│       parkinson_old_new_merged_no_duplicates.csv
+│
+├───new_literature
+│   │   hereditary_new_merged.csv
+│   │   hereditary_new_merged_no_duplicates.csv
+│   │
+│   ├───mental_health
+│   │       2020_mental_health.csv
+│   │       2021_mental_health.csv
+│   │       2022_mental_health.csv
+│   │       2023_mental_health.csv
+│   │       2024_mental_health.csv
+│   │       mental_heath_new_merged.csv
+│   │       mental_heath_new_merged_no_duplicates.csv
+│   │
+│   └───parkinson
+│           2020_parkinson.csv
+│           2021_parkinson.csv
+│           2022_parkinson.csv
+│           2023_parkinson.csv
+│           2024_parkinson.csv
+│           parkinson_new_merged.csv
+│           parkinson_new_merged_no_duplicates.csv
+│
+└───old_literature
+    │   hereditary_old_merged.csv
+    │   hereditary_old_merged_no_duplicates.csv
+    │
+    ├───mental_health
+    │       2020_mental_health.csv
+    │       2021_mental_health.csv
+    │       2022_mental_health.csv
+    │       2023_mental_health.csv
+    │       2024_mental_health.csv
+    │       mental_heath_old_merged.csv
+    │       mental_heath_old_merged_no_duplicates.csv
+    │
+    └───parkinson
+            2013_parkinson.csv
+            2021_parkinson.csv
+            2022_parkinson.csv
+            2023_parkinson.csv
+            2024_parkinson.csv
+            parkinson_old_merged.csv
+            parkinson_old_merged_no_duplicates.csv
+```
+
 - **old_literature**: Contains literature located in the folder *users/admin/Hereditary/Data/Literature* of the HEREDITARY Wiki retrieved from PubMed on 09/05/2024, referred to as "old".
 - **new_literature**: Contains literature retrieved from PubMed on *31/10/2024*, using the same queries as for "old_literature".
 - **merged_literature**: Literature obtained from merging both old and new collections.
